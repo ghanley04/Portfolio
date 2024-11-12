@@ -1,8 +1,8 @@
 const INFO = {
 	main: {
-		title: "ARC Folio Template",
-		name: "ARC",
-		email: "autonomy@purdue.edu",
+		title: "Gillian Hanley's Portfolio",
+		name: "Gillian Hnaley",
+		// email: "hanleyg@purdue.edu",
 		logo: "../logo.png",
 	},
 
