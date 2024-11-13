@@ -11,9 +11,29 @@
 	--primary-font: "Heebo", sans-serif;
 	--secondary-font: "Roboto", sans-serif;
 	/* --------------------- */
+}
 
-	/* ------- headers ------- */
-	--h1-text-size: 32px;
-	--secondary-font: "Roboto", sans-serif;
-	/* --------------------- */
+/* ------- headers ------- */
+.h1{
+	font-size: xx-large;
+} 
+
+.h2{
+	font-size: x-large;
+} 
+
+.h3{
+	font-size: large;
+} 
+
+.h4{
+	font-size: medium;
+} 
+
+.h5{
+	font-size: small;
+} 
+
+.h6{
+	font-size: x-small;
 }

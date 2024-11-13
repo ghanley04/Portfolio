@@ -40,3 +40,22 @@
 .email-wrapper {
 	padding-top: 20px;
 }
+
+/* .item{
+	
+} */
+
+.icons{
+	display:flex;
+	justify-content: space-evenly;
+}
+
+.column{
+	display: grid;
+	flex-direction: column;
+}
+
+.item{
+	grid-column: 1;
+	grid-row: 1;
+}

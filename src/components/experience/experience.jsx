@@ -19,9 +19,9 @@ const Experience = () => {
 		<>
 		<div class = "h1">What I've Worked With</div>
 		<div className="icons">
-			<div className="experience-icon">
-				<a href="#" target="_blank" rel="noreferrer">
-					<div className="experience-icon">
+			<div className="flex-container">
+				<a href="#" className ="column flex-container" target="_blank" rel="noreferrer">
+					<div className="item experience-icon">
 						<FontAwesomeIcon
 							icon={faReact}
 						/>
@@ -30,9 +30,9 @@ const Experience = () => {
 				</a>
 			</div>
 
-            <div className="experience-icon">
+            <div className="item experience-icon">
 				<a href="#" target="_blank" rel="noreferrer">
-					<div className="experience-icon">
+					<div className="item experience-icon">
 						<FontAwesomeIcon
 							icon={faFigma}
 						/>
@@ -41,9 +41,9 @@ const Experience = () => {
 				</a>
 			</div>
 
-            <div className="experience-icon">
+            <div className="item experience-icon">
 				<a href="#" target="_blank" rel="noreferrer">
-					<div className="experience-icon">
+					<div className="item experience-icon">
 						<FontAwesomeIcon
 							icon={faCss3}
 						/>
@@ -52,9 +52,9 @@ const Experience = () => {
 				</a>
 			</div>
 
-            <div className="experience-icon">
+            <div className="item experience-icon">
 				<a href="#" target="_blank" rel="noreferrer">
-					<div className="experience-icon">
+					<div className="item experience-icon">
 						<FontAwesomeIcon
 							icon={faBootstrap}
 						/>
