@@ -10,10 +10,12 @@ import {
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
+
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
 import AllProjects from "../components/projects/allProjects";
+import Experience from "../components/experience/experience";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -110,7 +112,7 @@ const Homepage = () => {
 							</div>
 						</div>
 
-						<div className="homepage-socials">
+						{/* <div className="homepage-socials">
 							<a
 								href={INFO.socials.twitter}
 								target="_blank"
@@ -161,10 +163,10 @@ const Homepage = () => {
 									className="homepage-social-icon"
 								/>
 							</a>
-						</div>
+						</div> */}
 
 						<div className="homepage-experience">
-							{/* <Experience /> */}
+							<Experience />
 						</div>
 
 						<div className="homepage-projects">

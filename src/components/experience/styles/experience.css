@@ -1,0 +1,42 @@
+@import "../../../data/styles.css";
+.icons,
+.email-wrapper {
+	display: flex;
+	padding-bottom: 20px;
+}
+
+.icons a,
+.email-wrapper a {
+	text-decoration: none;
+}
+
+.experience-icon {
+	padding-right: 20px;
+	font-size: 25px;
+	transition: color 0.2s ease-in-out;
+	color: var(--secondary-color);
+}
+
+.experience-icon:hover {
+	color: var(--primary-color);
+}
+
+.experience-text {
+	color: var(--secondary-color);
+	padding-left: 30px;
+	margin-top: -20px;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.email::before {
+	content: "";
+	display: block;
+	padding-top: 20px;
+	border-top: 3px solid #f4f4f5;
+	margin-top: 20px;
+}
+
+.email-wrapper {
+	padding-top: 20px;
+}
