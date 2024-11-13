@@ -10,9 +10,9 @@ import {
 
 import INFO from "../../data/user";
 
-import "./styles/socials.css";
+import "./styles/icons.css";
 
-const Socials = () => {
+const Icons = () => {
 	return (
 		<div className="socials">
 			<div className="social">
@@ -90,4 +90,4 @@ const Socials = () => {
 	);
 };
 
-export default Socials;
+export default Icons;

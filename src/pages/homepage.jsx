@@ -13,7 +13,6 @@ import {
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
@@ -36,18 +35,18 @@ const Homepage = () => {
 
 			let newLogoSize = 80 - (scroll * 4) / 10;
 
-			if (newLogoSize < oldLogoSize) {
-				if (newLogoSize > 40) {
-					setLogoSize(newLogoSize);
-					setOldLogoSize(newLogoSize);
-					setStayLogo(false);
-				} else {
-					setStayLogo(true);
-				}
-			} else {
-				setLogoSize(newLogoSize);
-				setStayLogo(false);
-			}
+			// if (newLogoSize < oldLogoSize) {
+			// 	if (newLogoSize > 40) {
+			// 		setLogoSize(newLogoSize);
+			// 		setOldLogoSize(newLogoSize);
+			// 		setStayLogo(false);
+			// 	} else {
+			// 		setStayLogo(true);
+			// 	}
+			// } else {
+			// 	setLogoSize(newLogoSize);
+			// 	setStayLogo(false);
+			// }
 		};
 
 		window.addEventListener("scroll", handleScroll);
@@ -164,15 +163,16 @@ const Homepage = () => {
 							</a>
 						</div>
 
+						<div className="homepage-experience">
+							{/* <Experience /> */}
+						</div>
+
 						<div className="homepage-projects">
 							<AllProjects />
 						</div>
 
-						<div className="homepage-after-title">
-
-							<div className="homepage-works">
-								{/* <Works /> */}
-							</div>
+						<div className="homepage-aboutme">
+							{/* <AboutMe /> */}
 						</div>
 
 						<div className="page-footer">
