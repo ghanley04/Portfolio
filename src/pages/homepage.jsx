@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faTwitter,
-	faGithub,
-	faStackOverflow,
-	faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+//dont need????
+// import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+// 	faTwitter,
+// 	faGithub,
+// 	faStackOverflow,
+// 	faInstagram,
+// } from "@fortawesome/free-brands-svg-icons";
 
 
 import Logo from "../components/common/logo";
@@ -16,6 +16,7 @@ import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
 import AllProjects from "../components/projects/allProjects";
 import Experience from "../components/experience/experience";
+import AboutMe from "../components/aboutMe/aboutMe";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -165,16 +166,16 @@ const Homepage = () => {
 							</a>
 						</div> */}
 
-						<div className="homepage-experience">
+						<div className="container homepage-experience">
 							<Experience />
 						</div>
 
-						<div className="homepage-projects">
+						<div className="container homepage-projects">
 							<AllProjects />
 						</div>
 
-						<div className="homepage-aboutme">
-							{/* <AboutMe /> */}
+						<div className="container homepage-aboutme">
+							<AboutMe/>
 						</div>
 
 						<div className="page-footer">

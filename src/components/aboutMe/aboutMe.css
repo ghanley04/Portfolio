@@ -1,0 +1,12 @@
+@import "../../data/styles.css";
+
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.details {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

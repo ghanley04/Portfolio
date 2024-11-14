@@ -92,6 +92,10 @@
 	flex-basis: 600px;
 	padding-top: 30px;
 }
+.container{
+	padding-top: 70px; 
+	padding-bottom: 0px;
+}
 
 @media (max-width: 1024px) {
 	.homepage-first-area {
@@ -146,5 +150,9 @@
 		flex-basis: auto;
 		margin-left: -25px;
 		margin-right: -25px;
+	}
+	.container{
+		padding-top: 30px; 
+		padding-bottom: 0px;
 	}
 }
