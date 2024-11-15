@@ -1,20 +1,22 @@
 @import "../../../data/styles.css";
 
 .footer {
-	display: flex;
+	/* display: flex; */
 	padding-top: 25px;
 	margin-top: 50px;
 	padding-bottom: 25px;
 	align-items: center;
 }
 
-.footer-links,
+/* .footer-links, */
 .footer-credits {
 	flex-basis: 50%;
 }
 
 .footer-links {
-	margin-left: -40px;
+	/* margin-left: -40px; */
+	align-items: center;
+	text-align: center;
 }
 
 .footer-nav-link-list {
@@ -52,7 +54,7 @@
 	}
 
 	.footer-links {
-		display: flex;
+		/* display: flex; */
 		width: 100%;
 		justify-content: center;
 	}

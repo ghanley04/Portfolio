@@ -7,8 +7,9 @@ const Footer = () => {
 	return (
 		<React.Fragment>
 			<div className="footer">
-				<div className="footer-links">
-					<ul className="footer-nav-link-list">
+				<div className="footer-links"> This website is also designed and coded by me in React as an additional project example
+					
+					{/* <ul className="footer-nav-link-list">
 						<li className="footer-nav-link-item">
 							<Link to="/">Home</Link>
 						</li>
@@ -21,7 +22,7 @@ const Footer = () => {
 						<li className="footer-nav-link-item">
 							<Link to="/contact">Contact</Link>
 						</li>
-					</ul>
+					</ul> */}
 				</div>
 
 				<div className="footer-credits">
