@@ -9,7 +9,9 @@ import {
     faReact,
     faFigma,
 	faNodeJs, 
-	faJsSquare
+	faJsSquare,
+	faAdobe, 
+	faAdobePhotoshop,
 } from "@fortawesome/free-brands-svg-icons";
 
 // import INFO from "../../../data/user";
@@ -108,7 +110,18 @@ const Experience = () => {
 					</div>
 					<div className="experience-text">Node.js</div>
 				</a>
-			</div>
+			</div> 
+
+			{/* <div className="item">
+				<a href="#" target="_blank" rel="noreferrer">
+					<div className="experience-icon">
+						<FontAwesomeIcon
+							icon={faAdobe}
+						/>
+					</div>
+					<div className="experience-text">Adobe Products</div>
+				</a>
+			</div> */}
 
 		</div>
 		</>

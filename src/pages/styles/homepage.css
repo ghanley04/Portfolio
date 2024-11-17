@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: left;
 	align-items: center;
-	padding-top: 130px;
+	padding-top: 70px;
 }
 
 .homepage-container {
@@ -13,7 +13,7 @@
 
 .homepage-first-area {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .homepage-title {
-	width: 85% !important;
+	width: 100% !important;
 }
 
 .homepage-subtitle {
@@ -37,18 +37,22 @@
 }
 
 .homepage-image-container {
-	width: 370px;
-	height: 370px;
+	width: 100%; 
+	height: 100%;
 }
 
-.homepage-image-wrapper {
-	overflow: hidden;
-	border-radius: 10%;
+/* .homepage-image-wrapper {
 	transform: rotate(3deg);
-}
+} */
 
-.homepage-image-wrapper img {
-	width: 100%;
+.homepage-image-container img {
+	overflow: hidden;
+	border-radius: 5%; 
+	object-position: center;
+	/* aspect-ratio: 827 / 550; */
+	width: 500px;
+	height: auto;
+	
 }
 
 .homepage-socials {

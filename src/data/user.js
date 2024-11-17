@@ -16,61 +16,62 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Engineer... Developer... AI...",
+		title: "Gillian Hanley",
 		description:
-			"lorem ipsum dolor",
+			"Designer, Developer, and Student",
+		location: "St. Louis, MO",
 	},
 
 	about: {
 		title: "I’m 'name'. I'm from... I build...",
 		description:
-			"lorem ipsum dolor",
+			"#",
 	},
 
 	projects: [
 		{
-			title: "Project 1",
+			title: "Figma Mockup",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"A mockup of a website in Figma designed to sell the coffee beans my dad roasts",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/figma/figma.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "#",
 		},
 
 		{
-			title: "Project 2",
+			title: "Tiny Threads",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
-			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 3",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"A group project of a website built to buy and resell children's clothing",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "#",
 		},
 
 		{
-			title: "Project 4",
+			title: "Moo Deng's Adventure",
+			description:
+				"A simple customized JavaScript game designed for my younger sister using a template",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			linkText: "View Project",
+			link: "#",
+		},
+
+		{
+			title: "Translunar",
+			description:
+				"An update to the company Translunar's website using React",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			linkText: "View Project",
+			link: "#",
+		},
+
+		{
+			title: "3D Parralax Application",
 			description:
 				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 5",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
+			link: "#",
 		},
 	],
 };

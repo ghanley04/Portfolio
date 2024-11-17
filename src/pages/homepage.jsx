@@ -11,6 +11,11 @@ import { Helmet } from "react-helmet";
 // } from "@fortawesome/free-brands-svg-icons";
 
 
+import {
+	falocation,
+} from "@fortawesome/free-brands-svg-icons"; //location icon for stl??
+
+
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
@@ -83,9 +88,9 @@ const Homepage = () => {
 				{/* <NavBar active="home" /> */}
 				<div className="content-wrapper">
 					<div className="homepage-logo-container">
-						<div style={logoStyle}>
+						{/* <div style={logoStyle}>
 							<Logo width={logoSize} link={false} />
-						</div>
+						</div> */}
 					</div>
 
 					<div className="homepage-container">
@@ -97,6 +102,8 @@ const Homepage = () => {
 
 								<div className="subtitle homepage-subtitle">
 									{INFO.homepage.description}
+									<br></br>
+									{INFO.homepage.location}
 								</div>
 							</div>
 
@@ -104,7 +111,7 @@ const Homepage = () => {
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
 										<img
-											src="homepage.jpg"
+											src="portrait.png"
 											alt="about"
 											className="homepage-image"
 										/>
