@@ -22,6 +22,7 @@ import NavBar from "../components/common/navBar";
 import AllProjects from "../components/projects/allProjects";
 import Experience from "../components/experience/experience";
 import AboutMe from "../components/aboutMe/aboutMe";
+import Contact from "../components/contact/contact";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -183,6 +184,10 @@ const Homepage = () => {
 
 						<div className="container homepage-aboutme">
 							<AboutMe/>
+						</div>
+
+						<div className="container homepage-contact">
+							<Contact/>
 						</div>
 
 						<div className="page-footer">

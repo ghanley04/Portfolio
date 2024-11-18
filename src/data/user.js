@@ -1,8 +1,11 @@
 const INFO = {
 	main: {
 		title: "Gillian Hanley's Portfolio",
-		name: "Gillian Hnaley",
-		// email: "hanleyg@purdue.edu",
+		name: "Gillian Hanley",
+		work: "hanleyg@purdue.edu",
+		personal: "gghanley04@gmail.com",
+		linkedin: "https://www.linkedin.com/in/gillian-hanley-a77024242/",
+		number: "314-230-6658",
 		logo: "../logo.png",
 	},
 
