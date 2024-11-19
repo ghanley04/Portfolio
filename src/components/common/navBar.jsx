@@ -3,6 +3,15 @@ import { Link } from "react-router-dom";
 
 import "./styles/navBar.css";
 
+function scrollToSection(sectionId) {
+	const element = document.getElementById(sectionId);
+	if (element) {
+		element.scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
+}
+
 const NavBar = (props) => {
 	const { active } = props;
 
@@ -19,7 +28,7 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/">Home</Link>
+								<a onClick={() => scrollToSection('home-home')}>Home</a>
 							</li>
 							<li
 								className={
@@ -28,7 +37,7 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/about">About</Link>
+								<a onClick={() => scrollToSection('home-projects')}>Projects</a>
 							</li>
 							<li
 								className={
@@ -37,22 +46,22 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/projects">Projects</Link>
-							</li>
-							<li
-								className={
-									active === "contact"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/contact">Contact</Link>
-							</li>
-						</ul>
-					</div>
-				</nav>
+								<a onClick={() => scrollToSection('home-about')}> About</a>
+						</li>
+						<li
+							className={
+								active === "contact"
+									? "nav-item active"
+									: "nav-item"
+							}
+						>
+							<a onClick={() => scrollToSection('home-contact')}>Contact</a>
+						</li>
+					</ul>
 			</div>
-		</React.Fragment>
+		</nav>
+			</div >
+		</React.Fragment >
 	);
 };
 

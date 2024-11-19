@@ -35,6 +35,8 @@ import "./styles/homepage.css";
 // const ProjectRef = useRef(null);
 // const ExperienceRef = useRef(null);
 
+
+
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
@@ -100,7 +102,7 @@ const Homepage = () => {
 						</div> */}
 					</div>
 
-					<div className="homepage-container">
+					<div className="homepage-container" id="home-home">
 						<div className="homepage-first-area">
 							<div className="homepage-first-area-left-side mx-2">
 								<div className="title homepage-title">
@@ -179,19 +181,19 @@ const Homepage = () => {
 							</a>
 						</div> */}
 
-						<div className="container homepage-experience">
+						<div className="container homepage-experience" id="home-experience">
 							<Experience />
 						</div>
 
-						<div className="container homepage-projects">
+						<div className="container homepage-projects" id="home-projects">
 							<AllProjects />
 						</div>
 
-						<div className="container homepage-aboutme">
+						<div className="container homepage-aboutme" id="home-about">
 							<AboutMe/>
 						</div>
 
-						<div className="container homepage-contact">
+						<div className="container homepage-contact" id="home-contact">
 							<Contact/>
 						</div>
 
