@@ -26,12 +26,15 @@
 	padding: 30px;
 }
 
-.project-logo {
-	width: 30px;
+.project-image {
+	width: 100%;
 }
 
-.project-logo img {
+.project-image img {
 	width: 100%;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
 }
 
 .project-title {

@@ -1,3 +1,5 @@
+import projectImage from './public projects/portrait.png';
+
 const INFO = {
 	main: {
 		title: "Gillian Hanley's Portfolio",
@@ -20,8 +22,7 @@ const INFO = {
 
 	homepage: {
 		title: "Gillian Hanley",
-		description:
-			"Designer, Developer, and Student",
+		description: "Designer, Developer, and Student",
 		location: "St. Louis, MO",
 	},
 
@@ -34,11 +35,11 @@ const INFO = {
 	projects: [
 		{
 			title: "Figma Mockup",
-			description:
-				"A mockup of a website in Figma designed to sell the coffee beans my dad roasts",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/figma/figma.png",
+			description: "A mockup of a website in Figma designed to sell coffee beans",
+			logo: "../../public/portrait.png",
 			linkText: "View Project",
 			link: "#",
+			image: process.env.PUBLIC_URL + '/portrait.png',
 		},
 
 		{
@@ -48,6 +49,7 @@ const INFO = {
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
 			linkText: "View Project",
 			link: "#",
+			image: process.env.PUBLIC_URL + '/logo.png',
 		},
 
 		{
@@ -57,6 +59,7 @@ const INFO = {
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
 			link: "#",
+			image: process.env.PUBLIC_URL + '/logo.png',
 		},
 
 		{
@@ -66,6 +69,7 @@ const INFO = {
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
 			link: "#",
+			image: process.env.PUBLIC_URL + '/logo.png',
 		},
 
 		{
@@ -75,6 +79,7 @@ const INFO = {
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
 			link: "#",
+			image: process.env.PUBLIC_URL + '/portrait.png',
 		},
 	],
 };

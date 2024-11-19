@@ -1,12 +1,36 @@
 @import "../../data/styles.css";
 
-.flex{
+.flex {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center; 
 }
 
 .details {
     text-align: left;
+    padding: 30px;
+    margin: 0px 0px;
+}
+
+.homepage-image {
+    width: auto;
+    height: auto;
     padding: 0px;
-    margin: 30px 80px;
+    margin: 0px;
+}
+
+.left-side {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 900px;
+}
+
+.right-side {
+    flex-basis: auto;
+}
+
+@media (max-width: 600px) {
+    .flex {
+        flex-wrap: wrap;
+    }
 }
