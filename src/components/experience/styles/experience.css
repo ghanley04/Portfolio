@@ -12,11 +12,12 @@
 
 .experience-icon{
 	transition: color 0.2s ease-in-out;
-}
-
-.experience-icon {
 	font-size: 25px;
 	color: var(--secondary-color);
+	padding: 8px;
+	display: flex;
+	justify-content: center;
+
 }
 
 .experience-icon:hover{
@@ -43,6 +44,8 @@
 }
 
 .icons{
+	display: flex; 
+	gap: 20px;
 	display: grid;
 	grid-template-columns: auto auto auto auto auto;
 	/* flex-wrap: wrap; */
@@ -50,9 +53,10 @@
 	text-align: center;
 }
 
-@media (max-width: 1024px){
+@media (max-width: 950px){
 	.icons{
 		grid-template-columns: auto auto auto auto;
+		gap: 15px;
 		/* flex-wrap: wrap; */
 	}
 }
@@ -60,6 +64,7 @@
 @media (max-width:650px){
 	.icons{
 		grid-template-columns: auto auto auto;
+		gap: 10px;
 		/* flex-wrap: wrap; */
 	}
 }

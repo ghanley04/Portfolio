@@ -1,21 +1,7 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
-//dont need????
-// import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-// 	faTwitter,
-// 	faGithub,
-// 	faStackOverflow,
-// 	faInstagram,
-// } from "@fortawesome/free-brands-svg-icons";
-
-
-import {
-	falocation,
-} from "@fortawesome/free-brands-svg-icons"; //location icon for stl??
-
+import { FaLocationDot } from "react-icons/fa6";
 
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
@@ -29,13 +15,6 @@ import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import "./styles/homepage.css";
-
-// const AboutRef = useRef(null);
-// const ContactRef = useRef(null);
-// const ProjectRef = useRef(null);
-// const ExperienceRef = useRef(null);
-
-
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
@@ -94,7 +73,7 @@ const Homepage = () => {
 			</Helmet>
 
 			<div className="page-content">
-				 <NavBar active="home" /> 
+				<NavBar active="home" />
 				<div className="content-wrapper">
 					<div className="homepage-logo-container">
 						{/* <div style={logoStyle}>
@@ -108,10 +87,14 @@ const Homepage = () => {
 								<div className="title homepage-title">
 									{INFO.homepage.title}
 								</div>
-								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
-									<br></br>
-									{INFO.homepage.location}
+								<div className="subtitle homepage-subtitle">	
+									<div className="inline-loc">
+										{INFO.homepage.description}
+									</div>
+									<div className="inline-loc">
+										<FaLocationDot className="mr-2" />
+										{INFO.homepage.location}
+									</div>
 								</div>
 							</div>
 
@@ -190,11 +173,11 @@ const Homepage = () => {
 						</div>
 
 						<div className="container homepage-aboutme" id="home-about">
-							<AboutMe/>
+							<AboutMe />
 						</div>
 
 						<div className="container homepage-contact" id="home-contact">
-							<Contact/>
+							<Contact />
 						</div>
 
 						<div className="page-footer">
