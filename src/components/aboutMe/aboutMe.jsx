@@ -11,9 +11,9 @@ const AboutMe = () => {
 				<div className="left-side">
 					<div className="image-container">
 						<img
-							src="homepage.jpg"
+							src="family.jpg"
 							alt="about"
-							className="homepage-image"
+							className="about-image"
 						/>
 					</div>
 				</div>
@@ -21,7 +21,7 @@ const AboutMe = () => {
 					<div class="details">I am a student in Web Programming and Design at Purdue University,
 						also studying Computer Science and Data Science. I am excited about both front and
 						back-end development, and I look forward to creating applications in order to solve
-						real-world problems. I also love hanging out with my family, making stickers of my
+						real-world problems. I also love travelling with my family, making stickers of my
 						two cats, crocheting peanuts characters, and a good frisbee disc.</div>
 				</div>
 			</div>
