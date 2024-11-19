@@ -10,7 +10,7 @@ import "./contact.css";
 const Contact = () => {
     return (
         <>
-            <div className="contact-container">
+            <div className="pt-0 my-0">
                 <div class="h1 header">Let's Get Connected</div>
 
                 <div  className="subtitle contact-subtitle">
@@ -19,7 +19,7 @@ const Contact = () => {
                         suggestions. If you have a specific question or
                         comment, please feel free to contact me thorugh any of
                         these avenues:</p>
-                    <ul className="ms-10">
+                    <ul className="my-4 ms-10">
                         <li className = "contact-socials">Work Email:
                             &nbsp;{" "}
                             <a className="link-color" href={`mailto:${INFO.main.personal}`}>
