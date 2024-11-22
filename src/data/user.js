@@ -56,8 +56,8 @@ const INFO = {
 				"A simple customized JavaScript game designed for my younger sister using a template",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
-			link: "#",
-			image: process.env.PUBLIC_URL + '/homepage.jpg',
+			link: "https://moodengadventuregame.site/",
+			image: process.env.PUBLIC_URL + '/moodeng.png',
 		},
 
 		{
