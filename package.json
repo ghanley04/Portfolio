@@ -5,8 +5,7 @@
 	"homepage": "https://ghanley04.github.io/Portfolio/",
 	"author": {
 		"name": "ARC",
-		"email": "autonomy@purdue.edu",
-		"url": "https://purduearc.com"
+		"email": "autonomy@purdue.edu"
 	},
 	"private": true,
 	"dependencies": {
