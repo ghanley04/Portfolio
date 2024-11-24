@@ -98,17 +98,17 @@ const Homepage = () => {
 								</div>
 							</div>
 
-							<div className="homepage-first-area-right-side">
+							{/* <div className="homepage-first-area-right-side">
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
 										<img
-											src="portrait.png"
+											src= "portrait.png"
 											alt="about"
 											className="homepage-image"
 										/>
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</div>
 
 						{/* <div className="homepage-socials">
