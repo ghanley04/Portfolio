@@ -11,7 +11,7 @@ const Contact = () => {
     return (
         <>
             <div className="pt-0 my-0">
-                <div class="h1 header">Let's Get Connected</div>
+                <div class="h2 header">Let's Get Connected</div>
 
                 <div  className="subtitle contact-subtitle">
                     <p>Thank you for your interest in getting in touch with

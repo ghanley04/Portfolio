@@ -6,7 +6,7 @@ import "./aboutMe.css";
 const AboutMe = () => {
 	return (
 		<>
-			<div class="h1 header">About Me</div>
+			<div class="h2 header">About Me</div>
 			<div class="flex">
 				<div className="left-side">
 					<div className="image-container">

@@ -11,7 +11,7 @@ import "./styles/experience.css";
 const Experience = () => {
 	return (
 		<>
-			<div class="h1 header">What I've Worked With</div>
+			<div class="h2 header">What I've Worked With</div>
 			<div className="icons">
 
 				<div className="item">

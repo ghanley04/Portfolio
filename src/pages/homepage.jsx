@@ -87,7 +87,7 @@ const Homepage = () => {
 								<div className="title homepage-title">
 									{INFO.homepage.title}
 								</div>
-								<div className="subtitle homepage-subtitle">	
+								<div className="subtitle homepage-subtitle">
 									<div className="inline-loc">
 										{INFO.homepage.description}
 									</div>
@@ -164,12 +164,12 @@ const Homepage = () => {
 							</a>
 						</div> */}
 
-						<div className="container homepage-experience" id="home-experience">
-							<Experience />
-						</div>
-
 						<div className="container homepage-projects" id="home-projects">
 							<AllProjects />
+						</div>
+
+						<div className="container homepage-experience" id="home-experience">
+							<Experience />
 						</div>
 
 						<div className="container homepage-aboutme" id="home-about">
