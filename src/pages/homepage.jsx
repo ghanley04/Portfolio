@@ -83,15 +83,15 @@ const Homepage = () => {
 
 					<div className="homepage-container" id="home-home">
 						<div className="homepage-first-area">
-							<div className="homepage-first-area-left-side mx-2">
-								<div className="title homepage-title">
+							<div className="homepage-first-area-left-side mx-2 flex flex-col items-center justify-center text-center h-full">
+								<div className="title homepage-title align-center">
 									{INFO.homepage.title}
 								</div>
 								<div className="subtitle homepage-subtitle">
-									<div className="inline-loc">
+									<div className="inline-loc text-center justify-center">
 										{INFO.homepage.description}
 									</div>
-									<div className="inline-loc">
+									<div className="inline-loc text-center justify-center">
 										<FaLocationDot className="mr-2" />
 										{INFO.homepage.location}
 									</div>
