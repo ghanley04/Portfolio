@@ -68,10 +68,5 @@
 .project-link-text {
 	padding-left: 20px;
 	font-weight: 700;
-}
 
-@media (max-width: 600px) {
-	.project {
-		height: 300px;
-	}
 }

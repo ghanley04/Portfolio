@@ -12,12 +12,12 @@ const Project = (props) => {
 	return (
 		<React.Fragment>
 			
-			<div className="project">
-				<Link to={link}>
+			<div className="project h-auto">
+				<Link >
 					<div className="project-image">
 						<img src={image} alt="image" />
 					</div>
-					<div className="project-container">
+					<div className="project-container  ">
 
 						<div className="project-title">{title}</div>
 						<div className="project-description">{description}</div>

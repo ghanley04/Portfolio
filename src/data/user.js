@@ -43,17 +43,17 @@ const INFO = {
 		{
 			title: "Tiny Threads",
 			description:
-				"A group project of a website built to buy and resell children's clothing",
+				"A demo project of a website built to buy and resell children's clothing",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
 			linkText: "View Project",
 			link: "#",
-			image: process.env.PUBLIC_URL + '/homepage.jpg',
+			image: process.env.PUBLIC_URL + '/tinythreads.png',
 		},
 
 		{
 			title: "Moo Deng's Adventure",
 			description:
-				"A simple customized JavaScript game designed for my younger sister using a template",
+				"A simple customized JavaScript game designed using a template",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
 			link: "https://moodengadventuregame.site/",
@@ -67,13 +67,13 @@ const INFO = {
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
 			link: "https://www.figma.com/proto/XDHQegrglzH5sFqO8dKXkN/Translunar-Website-V1?page-id=0%3A1&node-id=1-3&node-type=canvas&viewport=135%2C366%2C0.1&t=B9wluxMb7xJn4dgB-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3",
-			image: process.env.PUBLIC_URL + '/homepage.jpg',
+			image: process.env.PUBLIC_URL + '/translunar.png',
 		},
 
 		{
 			title: "3D Parralax Application",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"An interactive parallax website designed to be interactive adn responsive",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
 			link: "#",
