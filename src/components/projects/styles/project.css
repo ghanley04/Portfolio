@@ -70,3 +70,76 @@
 	font-weight: 700;
 
 }
+
+/*Overlay*/
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.overlay-content{
+	background: #fff;
+	padding: 20px;
+	width: 80%;
+	max-width: 700px;
+	display: flex;
+	gap: 20px;
+	border-radius: 8px;
+}
+
+.overlay-container {
+	padding: 30px;
+	flex: 1;
+}
+
+.overlay-image {
+	width: 100%;
+	flex: 1;
+}
+
+.overlay-image img {
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+}
+
+.overlay-title {
+	font-family: var(--secondary-font);
+	color: var(--primary-color);
+	font-size: 20px;
+	margin-bottom: 1em;
+	font-weight: 700;
+}
+
+.overlay-description {
+	color: var(--secondary-color);
+	margin-bottom: 0.5em;
+}
+
+.overlay-link {
+	display: flex;
+	align-items: center;
+	color: var(--secondary-color);
+	font-size: 12px;
+	padding-top: 20px;
+}
+
+.overlay-link-icon {
+	padding-left: 5px;
+	font-size: 13px;
+}
+
+.overlay-link-text {
+	padding-left: 20px;
+	font-weight: 700;
+
+}

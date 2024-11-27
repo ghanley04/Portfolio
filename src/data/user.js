@@ -38,6 +38,8 @@ const INFO = {
 			linkText: "View Project",
 			link: "https://www.figma.com/proto/InoCvj0G46xjA0naGEiRpv/Coffee-Econ-V1?page-id=27%3A85&node-id=27-115&node-type=canvas&viewport=785%2C390%2C0.23&t=VZQ4f28ICeD6tHxy-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=27%3A115",
 			image: process.env.PUBLIC_URL + '/coffee.png',
+			overlayText: "XXXXX",
+			overlayTools: "ZZZZZ",
 		},
 
 		{
@@ -48,6 +50,8 @@ const INFO = {
 			linkText: "View Project",
 			link: "#",
 			image: process.env.PUBLIC_URL + '/tinythreads.png',
+			overlayText: "XXXXX",
+			overlayTools: "ZZZZZ",
 		},
 
 		{
@@ -58,6 +62,8 @@ const INFO = {
 			linkText: "View Project",
 			link: "https://moodengadventuregame.site/",
 			image: process.env.PUBLIC_URL + '/moodeng.png',
+			overlayText: "XXXXX",
+			overlayTools: "ZZZZZ",
 		},
 
 		{
@@ -68,6 +74,8 @@ const INFO = {
 			linkText: "View Project",
 			link: "https://www.figma.com/proto/XDHQegrglzH5sFqO8dKXkN/Translunar-Website-V1?page-id=0%3A1&node-id=1-3&node-type=canvas&viewport=135%2C366%2C0.1&t=B9wluxMb7xJn4dgB-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3",
 			image: process.env.PUBLIC_URL + '/translunar.png',
+			overlayText: "XXXXX",
+			overlayTools: "ZZZZZ",
 		},
 
 		{
@@ -78,6 +86,8 @@ const INFO = {
 			linkText: "View Project",
 			link: "#",
 			image: process.env.PUBLIC_URL + '/parallax.png',
+			overlayText: "XXXXX",
+			overlayTools: "ZZZZZ",
 		},
 	],
 };

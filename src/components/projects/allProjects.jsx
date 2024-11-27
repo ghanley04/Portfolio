@@ -18,6 +18,8 @@ const AllProjects = () => {
 							description={project.description}
 							linkText={project.linkText}
 							link={project.link}
+							overlayText={project.overlayText}
+							overlayTools={project.overlayTools}
 						/>
 					</div>
 				))}
