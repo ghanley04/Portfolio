@@ -20,6 +20,7 @@ const AllProjects = () => {
 							link={project.link}
 							overlayText={project.overlayText}
 							overlayTools={project.overlayTools}
+							overlayLinkText={project.overlayLinkText}
 						/>
 					</div>
 				))}

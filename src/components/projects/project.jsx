@@ -6,7 +6,7 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import "./styles/project.css";
 
 const Project = (props) => {
-	const { image, title, description, linkText, link, overlayText, overlayTools } = props;
+	const { image, title, description, linkText, link, overlayText, overlayTools, overlayLinkText } = props;
 
 	// State to manage the overlay visibility
 	const [overlayVisible, setOverlayVisible] = useState(false);
@@ -42,12 +42,12 @@ const Project = (props) => {
 					<div className="overlay-container">
 						<div className="overlay-title">{title}</div>
 						<div className="overlay-description">{overlayText}</div>
-						<div className="overlay-description">Tools Used: {overlayTools}</div>
+						<div className="overlay-description"><b>Tools Used: </b>{overlayTools}</div>
 						<div className="overlay-link">
 							<div className="overlay-link-icon">
 								<FontAwesomeIcon icon={faLink} />
 							</div>
-							<div className="overlay-link-text">{linkText}</div>
+							<div className="overlay-link-text">{overlayLinkText}</div>
 						</div>
 					</div>
 				</div>

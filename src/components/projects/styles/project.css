@@ -91,6 +91,7 @@
 	padding: 20px;
 	width: 80%;
 	max-width: 700px;
+	height: 50%;
 	display: flex;
 	gap: 20px;
 	border-radius: 8px;
