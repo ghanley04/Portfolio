@@ -1,0 +1,147 @@
+@import "../../../data/styles.css";
+
+.project {
+	mix-blend-mode: normal;
+	border-radius: 20px;
+	opacity: 0.8;
+	height: 100%;
+}
+
+.project a {
+	text-decoration: none;
+}
+
+.project:hover {
+	background: #fafafa;
+	opacity: 1;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.project:hover .project-link {
+	color: var(--link-color);
+	transition: color 0.3s ease-in-out;
+}
+
+.project-container {
+	padding: 30px;
+}
+
+.project-image {
+	width: 100%;
+}
+
+.project-image img {
+	width: 100%;
+	object-fit: cover;
+	height: 150px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
+}
+
+.project-title {
+	font-family: var(--secondary-font);
+	color: var(--primary-color);
+	font-size: 16px;
+	padding-top: 15px;
+	margin-bottom: 1em;
+	font-weight: 700;
+}
+
+.project-description {
+	color: var(--secondary-color);
+}
+
+.project-link {
+	display: flex;
+	align-items: center;
+	color: var(--secondary-color);
+	font-size: 12px;
+	padding-top: 20px;
+}
+
+.project-link-icon {
+	padding-left: 5px;
+	font-size: 13px;
+}
+
+.project-link-text {
+	padding-left: 20px;
+	font-weight: 700;
+
+}
+
+/*Overlay*/
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.overlay-content{
+	background: #fff;
+	padding: 20px;
+	width: 80%;
+	max-width: 700px;
+	height: 50%;
+	display: flex;
+	gap: 20px;
+	border-radius: 8px;
+}
+
+.overlay-container {
+	padding: 30px;
+	flex: 1;
+}
+
+.overlay-image {
+	width: 100%;
+	flex: 1;
+}
+
+.overlay-image img {
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+}
+
+.overlay-title {
+	font-family: var(--secondary-font);
+	color: var(--primary-color);
+	font-size: 20px;
+	margin-bottom: 1em;
+	font-weight: 700;
+}
+
+.overlay-description {
+	color: var(--secondary-color);
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+.overlay-link {
+	display: flex;
+	align-items: center;
+	color: var(--secondary-color);
+	font-size: 12px;
+	padding-top: 20px;
+}
+
+.overlay-link-icon {
+	padding-left: 5px;
+	font-size: 13px;
+}
+
+.overlay-link-text {
+	padding-left: 20px;
+	font-weight: 700;
+
+}
