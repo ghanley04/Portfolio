@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaLink } from "react-icons/fa6";
 
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
@@ -95,6 +95,14 @@ const Homepage = () => {
 										<FaLocationDot className="mr-2" />
 										{INFO.homepage.location}
 									</div>
+									<div className="resume-link inline-loc text-center justify-center">
+										<div className="resume-link-icon">
+											<FaLink />
+										</div>
+										<a href="/pdf/Gillian_Hanley_Resume.pdf" className="resume-link-text" target="_blank" rel="noopener noreferrer">
+											View my Resume</a>
+									</div>
+
 								</div>
 							</div>
 

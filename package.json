@@ -1,11 +1,11 @@
 {
-	"name": "arcfolio",
+	"name": "gfolio",
 	"version": "1.1.0",
-	"description": "Portfolio Template",
+	"description": "Portfolio",
 	"homepage": "https://gillianhanley.online/",
 	"author": {
-		"name": "ARC",
-		"email": "autonomy@purdue.edu"
+		"name": "Gillian Hanley",
+		"email": "hanleyg@purdue.edu"
 	},
 	"private": true,
 	"dependencies": {
