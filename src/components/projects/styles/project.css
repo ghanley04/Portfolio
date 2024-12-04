@@ -66,7 +66,7 @@
 }
 
 .project-link-text {
-	padding-left: 20px;
+	/* padding-left: 20px; */
 	font-weight: 700;
 
 }
@@ -86,12 +86,16 @@
 	z-index: 1000;
 }
 
-.overlay-content{
+.overlay a {
+	pointer-events: auto;
+}
+
+.overlay-content {
 	background: #fff;
 	padding: 20px;
 	width: 80%;
 	max-width: 700px;
-	height: 50%;
+	height: auto;
 	display: flex;
 	gap: 20px;
 	border-radius: 8px;
@@ -143,5 +147,25 @@
 .overlay-link-text {
 	padding-left: 20px;
 	font-weight: 700;
+
+}
+
+@media(max-width: 700px) {
+
+	.overlay-content {
+		display: inline;
+		padding: 0px;
+	}
+
+	.overlay-image img {
+		height: 100%;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+
+	}
+
+	.overlay-container {
+		padding: 30px;
+	}
 
 }

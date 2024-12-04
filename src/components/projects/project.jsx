@@ -29,6 +29,12 @@ const Project = (props) => {
 		event.preventDefault();
 	};
 
+	// Opening new link 
+	const handleLinkClick = (e) => {
+		e.preventDefault();
+		window.open(link, '_blank', 'noopener noreferrer');
+	};
+
 	// Render overlay if visible
 	let overlay = null;
 	if (overlayVisible) {
@@ -47,7 +53,9 @@ const Project = (props) => {
 							<div className="overlay-link-icon">
 								<FontAwesomeIcon icon={faLink} />
 							</div>
-							<div className="overlay-link-text">{overlayLinkText}</div>
+							<a href="#" onClick={handleLinkClick} className="overlay-link-text">
+								{overlayLinkText}
+							</a>
 						</div>
 					</div>
 				</div>
@@ -58,7 +66,6 @@ const Project = (props) => {
 	return (
 		<React.Fragment>
 			{/* Project Content */}
-			<div className="h-auto">
 				<Link>
 					<div className="project" onClick={showOverlay}>
 						<div className="project-image">
@@ -69,15 +76,16 @@ const Project = (props) => {
 							<div className="project-title">{title}</div>
 							<div className="project-description">{description}</div>
 							<div className="project-link">
-								<div className="project-link-icon">
+								{/* <div className="project-link-icon">
 									<FontAwesomeIcon icon={faLink} />
-								</div>
-								<div className="project-link-text">{linkText}</div>
+								</div> */}
+								<a href="#" /*onClick={handleLinkClick}*/ className="project-link-text">
+									{linkText}
+								</a>
 							</div>
 						</div>
 					</div>
 				</Link>
-			</div>
 
 			{/* Render overlay if it is visible */}
 			{overlay}
