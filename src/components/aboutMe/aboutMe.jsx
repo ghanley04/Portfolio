@@ -11,7 +11,7 @@ const AboutMe = () => {
 				<div className="left-side">
 					<div className="image-container">
 						<img
-							src="family.jpg"
+							src="portrait.png"
 							alt="about"
 							className="about-image"
 						/>

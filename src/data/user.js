@@ -49,7 +49,7 @@ const INFO = {
 				"A demo project of a website built to buy and resell children's clothing",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
 			linkText: "Click here to view more...",
-			link: "#",
+			link: "https://tinythreads.me/",
 			image: process.env.PUBLIC_URL + '/tinythreads.png',
 			overlayText: "This website is designed to buy and sell used children's clothing. This was a group project, and I designed and coded the 'Buy' page and checkout process, along with the CSS for other pages and uploading the website to a server",
 			overlayTools: "Figma, HTML, Bootstrap CSS, and Javascript",

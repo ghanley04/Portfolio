@@ -15,93 +15,93 @@ const Experience = () => {
 			<div className="icons">
 
 				<div className="item">
-					<a href="#" target="_blank" rel="noreferrer">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 						<div className="experience-icon">
 							<FaReact />
 						</div>
 						<div className="experience-text">React</div>
-					</a>
+					{/* </a> */}
 				</div>
 
 				<div className="item">
-					<a href="#" target="_blank" rel="noreferrer">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 						<div className="experience-icon">
 							<FaFigma />
 						</div>
 						<div className="experience-text">Figma</div>
-					</a>
+					{/* </a> */}
 				</div>
 
 				<div className="item">
-					<a href="#" target="_blank" rel="noreferrer">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 						<div className="experience-icon">
 							<FaCss3 />
 						</div>
 						<div className="experience-text">CSS</div>
-					</a>
+					{/* </a> */}
 				</div>
 
 				<div className="item">
-					<a href="#" target="_blank" rel="noreferrer">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 						<div className="experience-icon">
 							<SiTailwindcss />
 						</div>
 						<div className="experience-text">Tailwind</div>
-					</a>
+					{/* </a> */}
 				</div>
 
 				<div className="item">
-					<a href="#" target="_blank" rel="noreferrer">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 						<div className="experience-icon">
 							<FaBootstrap />
 						</div>
 						<div className="experience-text">Bootstrap</div>
-					</a>
+					{/* </a> */}
 				</div>
 
 				<div className="item">
-					<a href="#" target="_blank" rel="noreferrer">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 						<div className="experience-icon">
 							<FaGithub />
 						</div>
 						<div className="experience-text">Github</div>
-					</a>
+					{/* </a> */}
 				</div>
 
 				<div className="item">
-					<a href="#" target="_blank" rel="noreferrer">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 						<div className="experience-icon">
 							<SiJavascript />
 						</div>
 						<div className="experience-text">JavaScript</div>
-					</a>
+					{/* </a> */}
 				</div>
 
 				<div className="item">
-					<a href="#" target="_blank" rel="noreferrer">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 						<div className="experience-icon">
 							<FaHtml5 />
 						</div>
 						<div className="experience-text">HTML5</div>
-					</a>
+					{/* </a> */}
 				</div>
 
 				<div className="item">
-					<a href="#" target="_blank" rel="noreferrer">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 						<div className="experience-icon">
 							<FaNodeJs />
 						</div>
 						<div className="experience-text">Node.js</div>
-					</a>
+					{/* </a> */}
 				</div>
 
 				<div className="item">
-					<a href="#" target="_blank" rel="noreferrer">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 						<div className="experience-icon">
 							<SiAdobephotoshop />
 						</div>
 						<div className="experience-text">Photoshop</div>
-					</a>
+					{/* </a> */}
 				</div>
 
 				{/* <div className="item">

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { FaCircleXmark  } from "react-icons/fa6";
+
 
 import "./styles/project.css";
 
@@ -44,8 +46,10 @@ const Project = (props) => {
 					<div className="overlay-image">
 						<img src={image} alt="image" />
 					</div>
-
 					<div className="overlay-container">
+						<div className="overlay-exit" onClick={hideOverlay}>
+							<FaCircleXmark className="overlay-exit-button" />
+						</div>
 						<div className="overlay-title">{title}</div>
 						<div className="overlay-description">{overlayText}</div>
 						<div className="overlay-description"><b>Tools Used: </b>{overlayTools}</div>
@@ -66,26 +70,26 @@ const Project = (props) => {
 	return (
 		<React.Fragment>
 			{/* Project Content */}
-				<Link>
-					<div className="project" onClick={showOverlay}>
-						<div className="project-image">
-							<img src={image} alt="image" />
-						</div>
+			<Link>
+				<div className="project" onClick={showOverlay}>
+					<div className="project-image">
+						<img src={image} alt="image" />
+					</div>
 
-						<div className="project-container">
-							<div className="project-title">{title}</div>
-							<div className="project-description">{description}</div>
-							<div className="project-link">
-								{/* <div className="project-link-icon">
+					<div className="project-container">
+						<div className="project-title">{title}</div>
+						<div className="project-description">{description}</div>
+						<div className="project-link">
+							{/* <div className="project-link-icon">
 									<FontAwesomeIcon icon={faLink} />
 								</div> */}
-								<a href="#" /*onClick={handleLinkClick}*/ className="project-link-text">
-									{linkText}
-								</a>
-							</div>
+							<a href="#" /*onClick={handleLinkClick}*/ className="project-link-text">
+								{linkText}
+							</a>
 						</div>
 					</div>
-				</Link>
+				</div>
+			</Link>
 
 			{/* Render overlay if it is visible */}
 			{overlay}

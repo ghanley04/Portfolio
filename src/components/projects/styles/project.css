@@ -91,9 +91,10 @@
 }
 
 .overlay-content {
+	position: relative;
 	background: #fff;
 	padding: 20px;
-	width: 80%;
+	width: 90%;
 	max-width: 700px;
 	height: auto;
 	display: flex;
@@ -150,6 +151,27 @@
 
 }
 
+.overlay-exit {
+	position: absolute;
+	/* Allows precise placement relative to .overlay-container */
+	top: 10px;
+	/* Distance from the top edge of .overlay-container */
+	right: 10px;
+	/* Distance from the right edge of .overlay-container */
+	cursor: pointer;
+	/* Pointer cursor for better UX */
+}
+
+.overlay-exit-button {
+	font-size: 24px;
+	/* Adjust icon size */
+	color: var(--secondary-color);
+}
+
+.overlay-exit-button:hover {
+	color: var(--link-color);
+}
+
 @media(max-width: 700px) {
 
 	.overlay-content {
@@ -158,13 +180,35 @@
 	}
 
 	.overlay-image img {
-		height: 100%;
+		height: 400px;
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
+		object-fit: cover;
+	}
+
+	.overlay-image {
+		height: 50%;
+	}
+
+	.overlay-exit-button {
+		font-size: 24px;
+		/* Adjust icon size */
+		/* color: #85665b; */
+		color: var(--secondary-color);
+		background-color: white;
+		/* This color will show through the non-transparent part */
+		mask-image: radial-gradient(circle, white 68%, transparent 0%);
+		-webkit-mask-image: radial-gradient(circle, white 68%, transparent 0%); 
+		mask-size: 100% 100%;
 
 	}
 
+	.overlay-exit-button:hover {
+		color: var(--link-color);
+	}
+
 	.overlay-container {
+		/* position: relative; */
 		padding: 30px;
 	}
 
