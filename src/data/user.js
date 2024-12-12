@@ -108,7 +108,7 @@ const INFO = {
 			overlayLinkText: "View Code",
 			link: "https://github.com/ghanley04/3D-Parallax-Effect",
 			overlayLinkText2: "View Website",
-			link2: "#",
+			link2: "https://www.parallaxtest.online/",
 		},
 	],
 };
