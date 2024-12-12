@@ -17,10 +17,13 @@ const AllProjects = () => {
 							title={project.title}
 							description={project.description}
 							linkText={project.linkText}
-							link={project.link}
 							overlayText={project.overlayText}
 							overlayTools={project.overlayTools}
 							overlayLinkText={project.overlayLinkText}
+							overlayLinkText2={project.overlayLinkText2}
+							link={project.link}
+							link2={project.link2}
+							item={project.item}
 						/>
 					</div>
 				))}

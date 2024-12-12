@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { FaCircleXmark  } from "react-icons/fa6";
+import { FaCircleXmark } from "react-icons/fa6";
 
 
 import "./styles/project.css";
 
 const Project = (props) => {
-	const { image, title, description, linkText, link, overlayText, overlayTools, overlayLinkText } = props;
+	const { item, image, title, description, linkText, link, overlayText, overlayTools, overlayLinkText, overlayLinkText2, link2 } = props;
 
 	// State to manage the overlay visibility
 	const [overlayVisible, setOverlayVisible] = useState(false);
@@ -30,11 +30,16 @@ const Project = (props) => {
 		event.stopPropagation();
 		event.preventDefault();
 	};
-
+	console.log("item: ");
+	console.log(item);
 	// Opening new link 
 	const handleLinkClick = (e) => {
 		e.preventDefault();
 		window.open(link, '_blank', 'noopener noreferrer');
+	};
+	const handleLinkClick2 = (e) => {
+		e.preventDefault();
+		window.open(link2, '_blank', 'noopener noreferrer');
 	};
 
 	// Render overlay if visible
@@ -61,6 +66,32 @@ const Project = (props) => {
 								{overlayLinkText}
 							</a>
 						</div>
+
+						{(item !== "1" && item !== "2") && (
+							<div className="overlay-link">
+
+								{item === "4" ? (
+									<div className="overlay-link">
+										<div className="overlay-link-icon">
+											<FontAwesomeIcon icon={faLink} />
+										</div>
+										<p className="overlay-link-text">
+											{overlayLinkText2}
+										</p>
+									</div>) : (
+									// Default link when item is not "4"
+									<div className="overlay-link">
+										<div className="overlay-link-icon">
+											<FontAwesomeIcon icon={faLink} />
+										</div>
+										<a href="#" onClick={handleLinkClick2} className="overlay-link-text">
+											{overlayLinkText2}
+										</a>
+									</div>
+								)}
+
+							</div>
+						)}
 					</div>
 				</div>
 			</div>

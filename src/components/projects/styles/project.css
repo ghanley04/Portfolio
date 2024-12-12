@@ -137,7 +137,7 @@
 	align-items: center;
 	color: var(--secondary-color);
 	font-size: 12px;
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
 .overlay-link-icon {
@@ -180,7 +180,7 @@
 	}
 
 	.overlay-image img {
-		height: 400px;
+		height: 200px;
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
 		object-fit: cover;
