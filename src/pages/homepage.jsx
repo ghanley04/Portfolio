@@ -92,7 +92,7 @@ const Homepage = () => {
 										{INFO.homepage.description}
 									</div>
 									<div className="inline-loc text-center justify-center">
-										<FaLocationDot className="mr-2" />
+										<FaLocationDot className="#" />
 										{INFO.homepage.location}
 									</div>
 									<div className="resume-link inline-loc text-center justify-center">

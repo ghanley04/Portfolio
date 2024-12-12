@@ -2,7 +2,7 @@
 
 .flex {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .details {
@@ -20,14 +20,17 @@
 }
 
 .left-side {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 1200px;
+    flex-basis: 1800px;
 }
 
 .right-side {
     flex-basis: auto;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 600px) {
