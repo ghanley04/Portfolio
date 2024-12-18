@@ -70,7 +70,7 @@ const Project = (props) => {
 						{(item !== "1" && item !== "2") && (
 							<div className="overlay-link">
 
-								{item === "4" ? (
+								{/* {item === "4" ? (
 									<div className="overlay-link">
 										<div className="overlay-link-icon">
 											<FontAwesomeIcon icon={faLink} />
@@ -78,7 +78,7 @@ const Project = (props) => {
 										<p className="overlay-link-text">
 											{overlayLinkText2}
 										</p>
-									</div>) : (
+									</div>) : ( */}
 									// Default link when item is not "4"
 									<div className="overlay-link">
 										<div className="overlay-link-icon">
@@ -88,7 +88,7 @@ const Project = (props) => {
 											{overlayLinkText2}
 										</a>
 									</div>
-								)}
+								{/* )} */}
 
 							</div>
 						)}
