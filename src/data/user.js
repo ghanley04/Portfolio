@@ -91,8 +91,8 @@ const INFO = {
 			overlayTools: "React, Tailwind CSS, Next.js",
 			overlayLinkText: "View Mockup",
 			link: "https://www.figma.com/proto/XDHQegrglzH5sFqO8dKXkN/Translunar-Website-V1?page-id=0%3A1&node-id=1-3&node-type=canvas&viewport=135%2C366%2C0.1&t=B9wluxMb7xJn4dgB-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3",
-			overlayLinkText2: "Published Website Coming Soon...",
-			link2: "#",
+			overlayLinkText2: "View Website",
+			link2: "https://www.translunar-esi.com/",
 		},
 
 		{
