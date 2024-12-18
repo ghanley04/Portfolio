@@ -79,7 +79,7 @@ const Project = (props) => {
 											{overlayLinkText2}
 										</p>
 									</div>) : ( */}
-									// Default link when item is not "4"
+									{/* // Default link when item is not "4" */}
 									<div className="overlay-link">
 										<div className="overlay-link-icon">
 											<FontAwesomeIcon icon={faLink} />
