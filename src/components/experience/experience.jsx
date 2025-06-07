@@ -1,8 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SiAdobephotoshop, SiJavascript, SiTailwindcss  } from "react-icons/si";
-import { FaFigma, FaReact, FaCss3, FaHtml5, FaNodeJs, FaGithub, FaBootstrap } from "react-icons/fa6";
+import { SiAdobephotoshop, SiJavascript, SiTailwindcss, SiFramer, SiIntellijidea } from "react-icons/si";
+import { FaFigma, FaReact, FaCss3, FaHtml5, FaNodeJs, FaGithub, FaBootstrap, FaJava } from "react-icons/fa6";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { VscVscode } from "react-icons/vsc";
 
 // import INFO from "../../../data/user";
 
@@ -16,91 +17,127 @@ const Experience = () => {
 
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-						<div className="experience-icon">
-							<FaReact />
-						</div>
-						<div className="experience-text">React</div>
+					<div className="experience-icon">
+						<FaReact />
+					</div>
+					<div className="experience-text">React</div>
 					{/* </a> */}
 				</div>
 
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-						<div className="experience-icon">
-							<FaFigma />
-						</div>
-						<div className="experience-text">Figma</div>
+					<div className="experience-icon">
+						<FaNodeJs />
+					</div>
+					<div className="experience-text">Node.js</div>
 					{/* </a> */}
 				</div>
 
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-						<div className="experience-icon">
-							<FaCss3 />
-						</div>
-						<div className="experience-text">CSS</div>
+					<div className="experience-icon">
+						<SiTailwindcss />
+					</div>
+					<div className="experience-text">Tailwind</div>
 					{/* </a> */}
 				</div>
 
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-						<div className="experience-icon">
-							<SiTailwindcss />
-						</div>
-						<div className="experience-text">Tailwind</div>
+					<div className="experience-icon">
+						<FaBootstrap />
+					</div>
+					<div className="experience-text">Bootstrap</div>
 					{/* </a> */}
 				</div>
 
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-						<div className="experience-icon">
-							<FaBootstrap />
-						</div>
-						<div className="experience-text">Bootstrap</div>
+					<div className="experience-icon">
+						<FaJava />
+					</div>
+					<div className="experience-text">Java</div>
 					{/* </a> */}
 				</div>
 
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-						<div className="experience-icon">
-							<FaGithub />
-						</div>
-						<div className="experience-text">Github</div>
+					<div className="experience-icon">
+						<SiJavascript />
+					</div>
+					<div className="experience-text">JavaScript</div>
 					{/* </a> */}
 				</div>
 
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-						<div className="experience-icon">
-							<SiJavascript />
-						</div>
-						<div className="experience-text">JavaScript</div>
+					<div className="experience-icon">
+						<FaHtml5 />
+					</div>
+					<div className="experience-text">HTML5</div>
 					{/* </a> */}
 				</div>
 
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-						<div className="experience-icon">
-							<FaHtml5 />
-						</div>
-						<div className="experience-text">HTML5</div>
+					<div className="experience-icon">
+						<FaCss3 />
+					</div>
+					<div className="experience-text">CSS</div>
 					{/* </a> */}
 				</div>
 
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-						<div className="experience-icon">
-							<FaNodeJs />
-						</div>
-						<div className="experience-text">Node.js</div>
+					<div className="experience-icon">
+						<FaGithub />
+					</div>
+					<div className="experience-text">Github</div>
 					{/* </a> */}
 				</div>
 
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-						<div className="experience-icon">
-							<SiAdobephotoshop />
-						</div>
-						<div className="experience-text">Photoshop</div>
+					<div className="experience-icon">
+						<FaFigma />
+					</div>
+					<div className="experience-text">Figma</div>
+					{/* </a> */}
+				</div>
+
+				<div className="item">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
+					<div className="experience-icon">
+						<SiFramer />
+					</div>
+					<div className="experience-text">Framer</div>
+					{/* </a> */}
+				</div>
+
+				<div className="item">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
+					<div className="experience-icon">
+						<VscVscode />
+					</div>
+					<div className="experience-text">VSCode</div>
+					{/* </a> */}
+				</div>
+
+				<div className="item">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
+					<div className="experience-icon">
+						<SiIntellijidea />
+					</div>
+					<div className="experience-text">IntelliJ</div>
+					{/* </a> */}
+				</div>
+
+				<div className="item">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
+					<div className="experience-icon">
+						<SiAdobephotoshop />
+					</div>
+					<div className="experience-text">Photoshop</div>
 					{/* </a> */}
 				</div>
 

@@ -67,7 +67,7 @@ const Project = (props) => {
 							</a>
 						</div>
 
-						{(item !== "1" && item !== "2") && (
+						{(item !== "1" && item !== "5") && (
 							<div className="overlay-link">
 
 								{/* {item === "4" ? (

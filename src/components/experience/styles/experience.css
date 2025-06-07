@@ -1,4 +1,5 @@
 @import "../../../data/styles.css";
+
 .icons,
 .email-wrapper {
 	display: flex;
@@ -10,18 +11,26 @@
 	text-decoration: none;
 }
 
-.experience-icon{
-	transition: color 0.2s ease-in-out;
+.item {
+	transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.item:hover {
+	color: var(--link-color);
+	transform: scale(1.2);
+}
+
+.experience-icon {
+	transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 	font-size: 25px;
 	color: var(--secondary-color);
 	padding: 8px;
 	display: flex;
 	justify-content: center;
-
 }
 
 .experience-icon:hover{
-	color: var(--link-color);
+		color: var(--link-color);
 }
 
 .experience-text {
@@ -43,8 +52,8 @@
 	padding-top: 20px;
 }
 
-.icons{
-	display: flex; 
+.icons {
+	display: flex;
 	gap: 20px;
 	display: grid;
 	grid-template-columns: auto auto auto auto auto;
@@ -54,27 +63,27 @@
 	padding-top: 10px;
 }
 
-@media (max-width: 950px){
-	.icons{
+@media (max-width: 950px) {
+	.icons {
 		grid-template-columns: auto auto auto auto;
 		gap: 15px;
 		/* flex-wrap: wrap; */
 	}
 }
 
-@media (max-width:650px){
-	.icons{
+@media (max-width:650px) {
+	.icons {
 		grid-template-columns: auto auto auto;
 		gap: 10px;
 		/* flex-wrap: wrap; */
 	}
 }
 
-.item{
+.item {
 	padding: 15px;
 }
 
-.header{ 
+.header {
 	text-align: center;
 	padding: 15px;
 	padding-top: 25px;
