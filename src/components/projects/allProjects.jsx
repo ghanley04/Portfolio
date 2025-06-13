@@ -4,7 +4,7 @@ import Project from "./project";
 
 import INFO from "../../data/user";
 
-import "./allProjects.css";
+import "./styles/allProjects.css";
 
 const AllProjects = () => {
 	return (
