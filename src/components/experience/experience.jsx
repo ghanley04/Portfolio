@@ -7,7 +7,7 @@ import { VscVscode } from "react-icons/vsc";
 
 // import INFO from "../../../data/user";
 
-import "./styles/experience.css";
+import "./experience.css";
 
 const Experience = () => {
 	return (

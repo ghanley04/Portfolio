@@ -1,9 +1,9 @@
-@import "../../../data/styles.css";
+@import "../../data/styles.css";
 
 .icons,
 .email-wrapper {
 	display: flex;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 .icons a,
@@ -54,7 +54,6 @@
 
 .icons {
 	display: flex;
-	gap: 20px;
 	display: grid;
 	grid-template-columns: auto auto auto auto auto;
 	/* flex-wrap: wrap; */
@@ -66,7 +65,7 @@
 @media (max-width: 950px) {
 	.icons {
 		grid-template-columns: auto auto auto auto;
-		gap: 15px;
+		gap: 10px;
 		/* flex-wrap: wrap; */
 	}
 }
@@ -74,7 +73,7 @@
 @media (max-width:650px) {
 	.icons {
 		grid-template-columns: auto auto auto;
-		gap: 10px;
+		gap: 5px;
 		/* flex-wrap: wrap; */
 	}
 }
