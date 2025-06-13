@@ -1,0 +1,28 @@
+.all-projects-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: stretch;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: 100%;
+
+}
+
+.all-projects-project {
+	box-sizing: border-box;
+	padding: 10px;
+	overflow: hidden;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.all-projects-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 450px) {
+	.all-projects-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

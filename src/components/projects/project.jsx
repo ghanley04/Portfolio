@@ -5,7 +5,7 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FaCircleXmark } from "react-icons/fa6";
 
 
-import "./styles/project.css";
+import "./project.css";
 
 const Project = (props) => {
 	const { item, image, title, description, linkText, link, overlayText, overlayTools, overlayLinkText, overlayLinkText2, link2 } = props;
