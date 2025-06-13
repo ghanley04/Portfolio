@@ -22,7 +22,7 @@ const AboutMe = () => {
 						also studying Computer Science and Data Science. I am excited about both front and
 						back-end development, and I look forward to creating applications in order to solve
 						real-world problems. I also love travelling with my family, making stickers of my
-						two cats, crocheting Peanuts characters, and a good frisbee disc.</div>
+						two cats, crocheting peanuts characters, and a good frisbee disc.</div>
 				</div>
 			</div>
 		</>
