@@ -43,7 +43,7 @@ const INFO = {
 			overlayText: "This website is designed to buy and sell used children's clothing. This was a group project, and I designed and coded the 'Buy' page and checkout process, along with the CSS for other pages and uploading the website to a server",
 			overlayTools: "Figma, Framer",
 			overlayLinkText: "View Website",
-			link: "https://syncbiometrics.com/",
+			link: "https://synchroni.co/",
 			overlayLinkText2: "View Our Code",
 			link2: "#",
 		},
