@@ -15,6 +15,7 @@
 	width: 100%;
 }
 
+
 @media (max-width: 768px) {
 	.all-projects-container {
 		grid-template-columns: repeat(2, 1fr);

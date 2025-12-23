@@ -1,4 +1,4 @@
-@import "../../../data/styles.css";
+@import "../../../index.css";
 
 .project {
 	mix-blend-mode: normal;
@@ -40,7 +40,7 @@
 }
 
 .project-title {
-	font-family: var(--secondary-font);
+	font-family: var(--googlesansflex-font);
 	color: var(--primary-color);
 	font-size: 16px;
 	padding-top: 15px;
@@ -119,7 +119,7 @@
 }
 
 .overlay-title {
-	font-family: var(--secondary-font);
+	font-family: var(--googlesansflex-font);
 	color: var(--primary-color);
 	font-size: 20px;
 	margin-bottom: 1em;

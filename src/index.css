@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Roboto:wght@500&display=swap");
-@import "./data/styles.css";
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -15,4 +14,49 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
+}
+
+:root {
+	/* ------- colors ------- */
+	--primary-color: #2140a5;
+	--secondary-color: #1a4eae;
+	--tertiary-color: #acb4b0;
+	--background-color: #fffbcd;
+	--border-color: #c4bf7f;
+	--quaternary-color: #edfbef;
+	--link-color: #103552;
+	/* ---------------------- */
+
+	/* ------- fonts ------- */
+	--heebo-font: "Heebo", sans-serif;
+	--roboto-font: "Roboto", sans-serif;
+	--anton-font: "Anton", sans-serif;
+	--googlesansflex-font: "Google Sans Flex", sans-serif;
+	--jetbrainsmono-font: "JetBrains Mono", sans-serif;
+	/* --------------------- */
+}
+
+/* ------- headers ------- */
+.h1 {
+	font-size: xx-large;
+}
+
+.h2 {
+	font-size: x-large;
+}
+
+.h3 {
+	font-size: large;
+}
+
+.h4 {
+	font-size: medium;
+}
+
+.h5 {
+	font-size: small;
+}
+
+.h6 {
+	font-size: x-small;
 }

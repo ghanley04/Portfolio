@@ -1,10 +1,11 @@
-@import "../../data/styles.css";
+@import "../../index.css";
 
 .icons,
 .email-wrapper {
     display: flex;
     padding-bottom: 20px;
 }
+
 
 .icons a,
 .email-wrapper a {

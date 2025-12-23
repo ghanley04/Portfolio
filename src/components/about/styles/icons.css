@@ -1,4 +1,4 @@
-@import "../../../data/styles.css";
+@import "../../../index.css";
 .social,
 .email-wrapper {
 	display: flex;

@@ -1,4 +1,4 @@
-.about-logo-container {
+/* .about-logo-container {
 	display: flex;
 	justify-content: left;
 	padding-top: 25px;
@@ -28,19 +28,24 @@
 
 .about-right-side {
 	flex-basis: 900px;
+	color: var(--secondary-color);
+
 }
 
 .about-title {
 	width: 100% !important;
+
 }
 
 .about-subtitle {
 	width: 80% !important;
+	color: var(--secondary-color);
+
 }
 
 .about-left-side {
 	display: flex;
-	/* flex-direction: column; */
+	/* flex-direction: column; 
 	flex-basis: 300px;
 }
 
@@ -115,4 +120,4 @@
 	.about-image-container {
 		width: 80%;
 	}
-}
+} */

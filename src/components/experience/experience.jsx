@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SiAdobephotoshop, SiJavascript, SiTailwindcss, SiFramer, SiIntellijidea } from "react-icons/si";
-import { FaFigma, FaReact, FaCss3, FaHtml5, FaNodeJs, FaGithub, FaBootstrap, FaJava } from "react-icons/fa6";
+import { FaFigma, FaReact, FaCss3, FaHtml5, FaNodeJs, FaGithub, FaBootstrap, FaJava, FaAws, FaDocker, FaTerminal, FaC, FaCirclePlus, FaWordpress } from "react-icons/fa6";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { VscVscode } from "react-icons/vsc";
 
@@ -18,10 +18,16 @@ const Experience = () => {
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
+						<FaAws />
+					</div>
+					<div className="experience-text">AWS</div>
+					{/* </a> */}
+				</div>
+				<div className="item">
+					<div className="experience-icon">
 						<FaReact />
 					</div>
 					<div className="experience-text">React</div>
-					{/* </a> */}
 				</div>
 
 				<div className="item">
@@ -41,7 +47,30 @@ const Experience = () => {
 					<div className="experience-text">Tailwind</div>
 					{/* </a> */}
 				</div>
-
+				<div className="item">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
+					<div className="experience-icon">
+						<FaTerminal />
+					</div>
+					<div className="experience-text">C Programming</div>
+					{/* </a> */}
+				</div>
+				<div className="item">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
+					<div className="experience-icon">
+						<FaWordpress />
+					</div>
+					<div className="experience-text">Wordpress</div>
+					{/* </a> */}
+				</div>
+				<div className="item">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
+					<div className="experience-icon">
+						<FaDocker />
+					</div>
+					<div className="experience-text">Docker Desktop</div>
+					{/* </a> */}
+				</div>
 				<div className="item">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
@@ -152,7 +181,7 @@ const Experience = () => {
 				</a>
 			</div> */}
 
-			</div>
+			</div >
 		</>
 	);
 };

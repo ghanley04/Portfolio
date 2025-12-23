@@ -1,7 +1,7 @@
 const INFO = {
 	main: {
 		title: "Gillian Hanley's Portfolio",
-		name: "Gillian Hanley",
+		name: "GILLIAN HANLEY",
 		work: "hanleyg@purdue.edu",
 		personal: "gghanley04@gmail.com",
 		linkedin: "https://www.linkedin.com/in/gillian-hanley-a77024242/",
@@ -9,31 +9,25 @@ const INFO = {
 		logo: "../logo.png",
 	},
 
-	socials: {
-		twitter: "https://twitter.com/",
-		github: "https://github.com/",
-		linkedin: "https://linkedin.com/",
-		instagram: "https://instagram.com/",
-		stackoverflow: "https://stackoverflow.com/",
-		facebook: "https://facebook.com/",
-	},
-
-	homepage: {
-		title: "Gillian Hanley",
-		description: "Designer, Developer, and Student",
-		location: "St. Louis, MO",
-	},
-
-	about: {
-		title: "I’m 'name'. I'm from... I build...",
-		description:
-			"#",
-	},
-
 	projects: [
-
 		{
 			item: "1",
+			title: "NightLine COMO",
+			description:
+				"A client project to redesign the website of a company specializing in analyzing biometric data.",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
+			linkText: "Click here to view more...",
+			image: process.env.PUBLIC_URL + '/nightline.png',
+			overlayText: "This website is designed to buy and sell used children's clothing. This was a group project, and I designed and coded the 'Buy' page and checkout process, along with the CSS for other pages and uploading the website to a server",
+			overlayTools: "Figma, Framer",
+			overlayLinkText: "View Website",
+			link: "https://synchroni.co/",
+			overlayLinkText2: "View Our Code",
+			link2: "#",
+		},
+
+		{
+			item: "2",
 			title: "Synchroni",
 			description:
 				"A client project to redesign the website of a company specializing in analyzing biometric data.",
@@ -49,7 +43,7 @@ const INFO = {
 		},
 
 		{
-			item: "2",
+			item: "3",
 			title: "Translunar",
 			description:
 				"An update to the company Translunar's website using React",
@@ -81,7 +75,7 @@ const INFO = {
 		// },
 
 		{
-			item: "3",
+			item: "4",
 			title: "Moo Deng's Adventure",
 			description:
 				"A simple customized JavaScript game designed using a template",
@@ -91,14 +85,14 @@ const INFO = {
 			overlayText: "This project was created with vanilla Javascript. The player's goal is to eat fruits and avoid the enemy, Darth Vadar. I started with a tutorial by 'Franks labratory' for the basic framework, then designed the rest on my own.",
 			overlayTools: "HMTL, CSS, Javascript",
 			overlayLinkText: "View Game",
-			link: "https://moodengadventuregame.site/",
+			link: "https://moodengsadventure.online/",
 			overlayLinkText2: "View My Code",
 			link2: "https://github.com/ghanley04/Moo_Dengs_Adventure",
 
 		},
 
 		{
-			item: "4",
+			item: "5",
 			title: "3D Parralax Application",
 			description:
 				"An interactive parallax website designed to be interactive and responsive",
@@ -112,10 +106,8 @@ const INFO = {
 			overlayLinkText2: "View Website",
 			link2: "https://www.parallaxtest.online/",
 		},
-
-
 		{
-			item: "5",
+			item: "6",
 			title: "Figma Mockup",
 			description: "A mockup of a website in Figma designed to sell coffee beans",
 			logo: "../../public/portrait.png",

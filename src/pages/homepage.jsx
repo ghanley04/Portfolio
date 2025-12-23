@@ -83,21 +83,19 @@ const Homepage = () => {
 
 					<div className="homepage-container" id="home-home">
 						<div className="homepage-first-area">
-							<div className="homepage-first-area-left-side mx-2 flex flex-col items-center justify-center text-center h-full">
-								<div className="title homepage-title align-center">
-									{INFO.homepage.title}
+							<div className="homepage-first-area-left-side mx-2 flex flex-col h-full">
+								<div className="title homepage-title">
+									Gillian Hanley
 								</div>
 								<div className="subtitle homepage-subtitle">
-									<div className="inline-loc text-center justify-center">
-										{INFO.homepage.description}
+									<div className="inline-loc">
+										Designer, Developer, and Student
 									</div>
-									<div className="inline-loc text-center justify-center">
+									<div className="inline-loc">
 										<FaLocationDot className="#" />
-										{INFO.homepage.location}
-									</div>
-									<div className="resume-link inline-loc text-center justify-center">
+										St. Louis, MO
 										<div className="resume-link-icon">
-											<FaLink />
+											<FaLink /> 
 										</div>
 										<a href="/pdf/Gillian_Hanley_Resume.pdf" className="resume-link-text" target="_blank" rel="noopener noreferrer">
 											View my Resume</a>

@@ -1,4 +1,4 @@
-@import "../../data/styles.css";
+@import "../../index.css";
 
 .contact-logo-container {
 	display: flex;
@@ -17,9 +17,10 @@
 
 .contact-subtitle {
 	width: 100% !important;
+	color: var(--secondary-color);
 }
 
-.contact-all{
+.contact-all {
 	margin-left: 20px;
 	padding: 10px;
 }
@@ -30,6 +31,6 @@
 	margin-top: 30px;
 }
 
-.contact-socials a:hover{
+.contact-socials a:hover {
 	color: var(--link-color);
 }
