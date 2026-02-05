@@ -8,7 +8,7 @@ Personal Portfolio Instructions:
 
 you may have to reinstate the website domain;
 Check in the settings -> pages section of github
-gillianhanley.online
+gillianhanley.us
 
 be patient too give it a few mins
 
