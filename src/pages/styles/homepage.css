@@ -17,10 +17,6 @@
 	align-items: left;
 }
 
-.homepage-first-area-left-side {
-	display: flex;
-	flex-direction: column;
-}
 
 .homepage-title {
 	width: 100% !important;
