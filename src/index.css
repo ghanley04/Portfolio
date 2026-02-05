@@ -26,7 +26,8 @@ code {
 	/* soft gray-green, subtle neutral */
 	--background-color: #FDF6ED;
 	/* lighter, warmer beige for versatility */
---light-background-color: #f5f5f5;	/* ultra-light neutral tan */
+	--light-background-color: #f5f5f5;
+	/* ultra-light neutral tan */
 	--quaternary-color: #EDF8F2;
 	/* very soft minty/green-white, fresh accent */
 	--border-color: #D9A066;
