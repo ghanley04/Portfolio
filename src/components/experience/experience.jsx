@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SiAdobephotoshop, SiJavascript, SiTailwindcss, SiFramer, SiIntellijidea } from "react-icons/si";
-import { FaFigma, FaReact, FaCss3, FaHtml5, FaNodeJs, FaGithub, FaBootstrap, FaJava, FaAws, FaDocker, FaTerminal, FaC, FaCirclePlus, FaWordpress } from "react-icons/fa6";
+import { SiAdobephotoshop, SiJavascript, SiTailwindcss, SiFramer, SiIntellijidea, SiExpo } from "react-icons/si";
+import { FaFigma, FaAppStore, FaReact, FaCss3, FaHtml5, FaNodeJs, FaGithub, FaBootstrap, FaJava, FaAws, FaDocker, FaTerminal, FaC, FaCirclePlus, FaWordpress } from "react-icons/fa6";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { VscVscode } from "react-icons/vsc";
 
@@ -15,7 +15,7 @@ const Experience = () => {
 			<div class="h2 header">What I've Worked With</div>
 			<div className="icons">
 
-				<div className="item">
+				<div className="item item-aws">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<FaAws />
@@ -23,14 +23,14 @@ const Experience = () => {
 					<div className="experience-text">AWS</div>
 					{/* </a> */}
 				</div>
-				<div className="item">
+				<div className="item item-react">
 					<div className="experience-icon">
 						<FaReact />
 					</div>
 					<div className="experience-text">React</div>
 				</div>
 
-				<div className="item">
+				<div className="item item-nodejs">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<FaNodeJs />
@@ -39,7 +39,7 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				<div className="item">
+				<div className="item item-tailwind">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<SiTailwindcss />
@@ -47,7 +47,7 @@ const Experience = () => {
 					<div className="experience-text">Tailwind</div>
 					{/* </a> */}
 				</div>
-				<div className="item">
+				<div className="item item-cprogramming">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<FaTerminal />
@@ -55,7 +55,7 @@ const Experience = () => {
 					<div className="experience-text">C Programming</div>
 					{/* </a> */}
 				</div>
-				<div className="item">
+				<div className="item item-wordpress">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<FaWordpress />
@@ -63,7 +63,7 @@ const Experience = () => {
 					<div className="experience-text">Wordpress</div>
 					{/* </a> */}
 				</div>
-				<div className="item">
+				<div className="item item-docker">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<FaDocker />
@@ -71,7 +71,7 @@ const Experience = () => {
 					<div className="experience-text">Docker Desktop</div>
 					{/* </a> */}
 				</div>
-				<div className="item">
+				<div className="item item-bootstrap">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<FaBootstrap />
@@ -80,7 +80,7 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				<div className="item">
+				<div className="item item-java">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<FaJava />
@@ -89,7 +89,7 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				<div className="item">
+				<div className="item item-js">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<SiJavascript />
@@ -98,7 +98,7 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				<div className="item">
+				<div className="item item-html">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<FaHtml5 />
@@ -107,7 +107,7 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				<div className="item">
+				<div className="item item-css">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<FaCss3 />
@@ -116,7 +116,7 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				<div className="item">
+				<div className="item item-github">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<FaGithub />
@@ -125,7 +125,7 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				<div className="item">
+				<div className="item item-figma">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<FaFigma />
@@ -134,7 +134,7 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				<div className="item">
+				<div className="item item-framer">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<SiFramer />
@@ -143,7 +143,7 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				<div className="item">
+				<div className="item item-vscode">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<VscVscode />
@@ -152,7 +152,7 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				<div className="item">
+				<div className="item item-intellij">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<SiIntellijidea />
@@ -161,7 +161,7 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				<div className="item">
+				<div className="item item-photoshop">
 					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
 						<SiAdobephotoshop />
@@ -170,17 +170,14 @@ const Experience = () => {
 					{/* </a> */}
 				</div>
 
-				{/* <div className="item">
-				<a href="#" target="_blank" rel="noreferrer">
+				<div className="item item-expo">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
 					<div className="experience-icon">
-						<FontAwesomeIcon
-							icon={faAdobe}
-						/>
+						<SiExpo />
 					</div>
-					<div className="experience-text">Adobe Products</div>
-				</a>
-			</div> */}
-
+					<div className="experience-text">Expo Go</div>
+					{/* </a> */}
+				</div>
 			</div >
 		</>
 	);

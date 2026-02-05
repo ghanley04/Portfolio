@@ -12,6 +12,7 @@ const Project = (props) => {
 
 	// State to manage the overlay visibility
 	const [overlayVisible, setOverlayVisible] = useState(false);
+	const [titleVisible, setTitleVisible] = useState(false);
 
 	// Function to show the overlay
 	const showOverlay = () => {
@@ -23,6 +24,16 @@ const Project = (props) => {
 	const hideOverlay = () => {
 		setOverlayVisible(false); // Hide the overlay
 		document.body.style.overflow = 'auto'; // Re-enable scroll when overlay is hidden
+	};
+
+
+	const showTitle = () => {
+		setTitleVisible(true); // Show the overlay
+	};
+
+	// Function to hide the overlay
+	const hideTitle = () => {
+		setTitleVisible(false); // Hide the overlay
 	};
 
 	// Prevent click event from propagating when clicking inside the overlay content
@@ -67,7 +78,7 @@ const Project = (props) => {
 							</a>
 						</div>
 
-						{(item !== "2" && item !== "6") && (
+						{(item !== "3" && item !== "2" && item !== "1") && (
 							<div className="overlay-link">
 
 								{/* {item === "4" ? (
@@ -79,15 +90,15 @@ const Project = (props) => {
 											{overlayLinkText2}
 										</p>
 									</div>) : ( */}
-									{/* // Default link when item is not "4" */}
-									<div className="overlay-link">
-										<div className="overlay-link-icon">
-											<FontAwesomeIcon icon={faLink} />
-										</div>
-										<a href="#" onClick={handleLinkClick2} className="overlay-link-text">
-											{overlayLinkText2}
-										</a>
+								{/* // Default link when item is not "4" */}
+								<div className="overlay-link">
+									<div className="overlay-link-icon">
+										<FontAwesomeIcon icon={faLink} />
 									</div>
+									<a href="#" onClick={handleLinkClick2} className="overlay-link-text">
+										{overlayLinkText2}
+									</a>
+								</div>
 								{/* )} */}
 
 							</div>
@@ -102,22 +113,21 @@ const Project = (props) => {
 		<React.Fragment>
 			{/* Project Content */}
 			<Link>
-				<div className="project" onClick={showOverlay}>
-					<div className="project-image">
-						<img src={image} alt="image" />
-					</div>
-
-					<div className="project-container">
-						<div className="project-title">{title}</div>
-						<div className="project-description">{description}</div>
-						<div className="project-link">
-							{/* <div className="project-link-icon">
-									<FontAwesomeIcon icon={faLink} />
-								</div> */}
-							<a href="#" /*onClick={handleLinkClick}*/ className="project-link-text">
-								{linkText}
-							</a>
-						</div>
+				<div className="project" onMouseEnter={showTitle} onMouseLeave={hideTitle} onClick={showOverlay}>
+					<div className="project-image"
+					  style={{ backgroundImage: `url(${image})` }}>
+						{/* <img src={image} alt="image" /> */}
+						{titleVisible && (
+							<div className="project-container">
+								<div className="project-title">{title}</div>
+								<div className="project-description">{description}</div>
+								<div className="project-link">
+									<a href="#" /*onClick={handleLinkClick}*/ className="project-link-text">
+										{linkText}
+									</a>
+								</div>
+							</div>
+						)}
 					</div>
 				</div>
 			</Link>

@@ -18,32 +18,50 @@ const INFO = {
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
 			linkText: "Click here to view more...",
 			image: process.env.PUBLIC_URL + '/nightline.png',
-			overlayText: "This website is designed to buy and sell used children's clothing. This was a group project, and I designed and coded the 'Buy' page and checkout process, along with the CSS for other pages and uploading the website to a server",
-			overlayTools: "Figma, Framer",
+			overlayText: "This website is designed for a late-night student transportation service at the University of Missouri. I designed the website to be more user-friendly and visually appealing, and am currently developing a mobile app to be released soon. View the website adn code below.",
+			overlayTools: "AWS, React, Expo Go, App Development",
 			overlayLinkText: "View Website",
-			link: "https://synchroni.co/",
+			link: "https://www.nightlinecomo.com/",
 			overlayLinkText2: "View Our Code",
 			link2: "#",
+			className: "nightline"
 		},
-
 		{
 			item: "2",
+			title: "ES@P Website",
+			description: "Website designed for Purdue's Embedded Systems student organization",
+			logo: "../../public/esap.png",
+			linkText: "Click here to view more...",
+			image: process.env.PUBLIC_URL + '/esap.png',
+			overlayText: "This is a website for 'Embedded Systems at Purdue' student organization. I currently maintain this website and add new features to encourage club activity.",
+			overlayTools: "HTML, CSS, JavaScript",
+			overlayLinkText: "View Website",
+			link: "https://www.esap.dev/",
+			overlayLinkText2: "XXX",
+			link2: "XX",
+			className: "esap"
+
+		},
+		{
+			item: "3",
 			title: "Synchroni",
 			description:
 				"A client project to redesign the website of a company specializing in analyzing biometric data.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
 			linkText: "Click here to view more...",
 			image: process.env.PUBLIC_URL + '/synchroni.png',
-			overlayText: "This website is designed to buy and sell used children's clothing. This was a group project, and I designed and coded the 'Buy' page and checkout process, along with the CSS for other pages and uploading the website to a server",
+			overlayText: "This website was designed for a biometric data analysis company. I redesigned the website to be more user-friendly and visually appealing, focusing on clear presentation of their services and data security features.",
 			overlayTools: "Figma, Framer",
 			overlayLinkText: "View Website",
 			link: "https://synchroni.co/",
 			overlayLinkText2: "View Our Code",
 			link2: "#",
+			className: "synchroni"
+
 		},
 
 		{
-			item: "3",
+			item: "4",
 			title: "Translunar",
 			description:
 				"An update to the company Translunar's website using React",
@@ -56,6 +74,8 @@ const INFO = {
 			link: "https://www.figma.com/proto/XDHQegrglzH5sFqO8dKXkN/Translunar-Website-V1?page-id=0%3A1&node-id=1-3&node-type=canvas&viewport=135%2C366%2C0.1&t=B9wluxMb7xJn4dgB-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3",
 			overlayLinkText2: "View Website",
 			link2: "https://www.translunar-esi.com/",
+			className: "translunar"
+
 		},
 
 		// {
@@ -74,8 +94,9 @@ const INFO = {
 		// 	link2: "#",
 		// },
 
+
 		{
-			item: "4",
+			item: "5",
 			title: "Moo Deng's Adventure",
 			description:
 				"A simple customized JavaScript game designed using a template",
@@ -88,11 +109,12 @@ const INFO = {
 			link: "https://moodengsadventure.online/",
 			overlayLinkText2: "View My Code",
 			link2: "https://github.com/ghanley04/Moo_Dengs_Adventure",
+			className: "moo-deng"
+
 
 		},
-
 		{
-			item: "5",
+			item: "6",
 			title: "3D Parralax Application",
 			description:
 				"An interactive parallax website designed to be interactive and responsive",
@@ -101,25 +123,14 @@ const INFO = {
 			image: process.env.PUBLIC_URL + '/parallax.png',
 			overlayText: "This website is designed to show a parallax effect. I coded this to extend my knowledge of Javascript, based off of a tutorial by 'True Coder'. On my own, I made the website more responsive to different screen sizes.",
 			overlayTools: "HTML, Basic CSS, Javascript",
-			overlayLinkText: "View Code",
-			link: "https://github.com/ghanley04/3D-Parallax-Effect",
-			overlayLinkText2: "View Website",
-			link2: "https://www.parallaxtest.online/",
+			overlayLinkText: "View Website",
+			link: "https://ghanley04.github.io/3D-Parallax-Effect/",
+			overlayLinkText2: "View Code",
+			link2: "https://github.com/ghanley04/3D-Parallax-Effect",
+			className: "parralax"
+
 		},
-		{
-			item: "6",
-			title: "Figma Mockup",
-			description: "A mockup of a website in Figma designed to sell coffee beans",
-			logo: "../../public/portrait.png",
-			linkText: "Click here to view more...",
-			image: process.env.PUBLIC_URL + '/coffee.png',
-			overlayText: "This is a mockup of an app that sells roasted coffee beans, created purely in Figma. This was a project used to hone my skills in Figma.",
-			overlayTools: "Figma",
-			overlayLinkText: "View Mockup",
-			link: "https://www.figma.com/proto/InoCvj0G46xjA0naGEiRpv/Coffee-Econ-V1?page-id=27%3A85&node-id=27-115&node-type=canvas&viewport=785%2C390%2C0.23&t=VZQ4f28ICeD6tHxy-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=27%3A115",
-			overlayLinkText2: "View Website",
-			link2: "#",
-		},
+
 	],
 };
 

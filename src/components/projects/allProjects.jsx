@@ -11,7 +11,9 @@ const AllProjects = () => {
 		<><div className='h2 header'>My Projects</div>
 			<div className="all-projects-container">
 				{INFO.projects.map((project, index) => (
-					<div className="all-projects-project" key={index}>
+					<div
+						className={`all-projects-project ${project.className || ''}`}
+						key={index}>
 						<Project
 							image={project.image}
 							title={project.title}

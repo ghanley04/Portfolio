@@ -85,90 +85,26 @@ const Homepage = () => {
 						<div className="homepage-first-area">
 							<div className="homepage-first-area-left-side mx-2 flex flex-col h-full">
 								<div className="title homepage-title">
-									Gillian Hanley
-								</div>
+									GILLIAN HANLEY								</div>
 								<div className="subtitle homepage-subtitle">
-									<div className="inline-loc">
+									<div className="inline-item">
 										Designer, Developer, and Student
 									</div>
-									<div className="inline-loc">
-										<FaLocationDot className="#" />
-										St. Louis, MO
-										<div className="resume-link-icon">
-											<FaLink /> 
+									<div className="inline-group">
+										<div className="inline-item">
+											<FaLocationDot className="#" />
+											St. Louis, MO
 										</div>
-										<a href="/pdf/Gillian_Hanley_Resume.pdf" className="resume-link-text" target="_blank" rel="noopener noreferrer">
-											View my Resume</a>
+										<div className="inline-item">
+											<FaLink />
+											<a href="/pdf/Gillian_Hanley_Resume.pdf" className="resume-link-text" target="_blank" rel="noopener noreferrer">
+												View my Resume</a>
+										</div>
 									</div>
 
 								</div>
 							</div>
-
-							{/* <div className="homepage-first-area-right-side">
-								<div className="homepage-image-container">
-									<div className="homepage-image-wrapper">
-										<img
-											src= "portrait.png"
-											alt="about"
-											className="homepage-image"
-										/>
-									</div>
-								</div>
-							</div> */}
 						</div>
-
-						{/* <div className="homepage-socials">
-							<a
-								href={INFO.socials.twitter}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faTwitter}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.github}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faGithub}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.stackoverflow}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faStackOverflow}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faInstagram}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={`mailto:${INFO.main.email}`}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faMailBulk}
-									className="homepage-social-icon"
-								/>
-							</a>
-						</div> */}
 
 						<div className="container homepage-projects" id="home-projects">
 							<AllProjects />
