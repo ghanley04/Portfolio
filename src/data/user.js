@@ -14,7 +14,7 @@ const INFO = {
 			item: "1",
 			title: "NightLine COMO",
 			description:
-				"A client project to redesign the website of a company specializing in analyzing biometric data.",
+				"A client project to create a mobile app and website for a late-night student transportation service.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
 			linkText: "Click here to view more...",
 			image: process.env.PUBLIC_URL + '/nightline.png',

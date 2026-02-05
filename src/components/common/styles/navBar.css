@@ -49,11 +49,14 @@
 .nav-item a {
 	text-decoration: none;
 	color: var(--primary-color);
+	cursor: pointer;
+	display: inline-block;
+	transition: all 0.3s ease;
 }
 
 .nav-item a:hover {
 	color: var(--link-color);
-	transition: color 0.3s ease-in-out;
+	transform: scale(1.1);
 }
 
 @media (max-width: 600px) {
