@@ -43,7 +43,8 @@
 }
 
 .project:hover .project-image::before {
-	background: rgba(255, 255, 255, 0.9);
+	background: var(--light-background-color);
+	opacity: 0.9;
 	/* White overlay - adjust 0.6 for more/less lightening */
 }
 
@@ -121,7 +122,7 @@
 
 .overlay-content {
 	position: relative;
-	background: #fff;
+	background: var(--light-background-color);
 	padding: 20px;
 	width: 90%;
 	max-width: 900px;

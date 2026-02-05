@@ -19,12 +19,21 @@ code {
 :root {
 	/* ------- colors ------- */
 	--primary-color: #163085;
-	--secondary-color: #14439a;
-	--tertiary-color: #acb4b0;
-	--background-color: #fffbcd;
-	--border-color: #c4bf7f;
-	--quaternary-color: #edfbef;
+	/* deep royal blue, anchor color */
+	--secondary-color: #1A54B8;
+	/* slightly brighter blue for contrast */
+	--tertiary-color: #A8B3AF;
+	/* soft gray-green, subtle neutral */
+	--background-color: #FDF6ED;
+	/* lighter, warmer beige for versatility */
+--light-background-color: #f5f5f5;	/* ultra-light neutral tan */
+	--quaternary-color: #EDF8F2;
+	/* very soft minty/green-white, fresh accent */
+	--border-color: #D9A066;
+	/* warm, muted orange-tan, subtle contrast */
 	--link-color: #103552;
+	/* deep navy, readable and complementary */
+
 	/* ---------------------- */
 
 	/* ------- fonts ------- */
