@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SiAdobephotoshop, SiJavascript, SiTailwindcss, SiFramer, SiIntellijidea, SiExpo } from "react-icons/si";
 import { FaFigma, FaAppStore, FaReact, FaCss3, FaHtml5, FaNodeJs, FaGithub, FaBootstrap, FaJava, FaAws, FaDocker, FaTerminal, FaC, FaCirclePlus, FaWordpress } from "react-icons/fa6";
+import { DiVisualstudio } from "react-icons/di";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { VscVscode } from "react-icons/vsc";
 
@@ -176,6 +177,14 @@ const Experience = () => {
 						<SiExpo />
 					</div>
 					<div className="experience-text">Expo Go</div>
+					{/* </a> */}
+				</div>
+								<div className="item item-expo">
+					{/* <a href="#" target="_blank" rel="noreferrer"> */}
+					<div className="experience-icon">
+						<DiVisualstudio />
+					</div>
+					<div className="experience-text">Visual Studio</div>
 					{/* </a> */}
 				</div>
 			</div >
