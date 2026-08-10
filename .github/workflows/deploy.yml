@@ -44,6 +44,11 @@ jobs:
 
       - name: Build Portfolio (Create React App -> ./build)
         run: npm run build
+        env:
+          # CRA treats ESLint/autoprefixer warnings as ERRORS when CI=true
+          # (which GitHub Actions sets). Your old local `npm run deploy` never
+          # set CI, so warnings were harmless — this restores that behavior.
+          CI: false
 
       # 3) Drop the SISTA app under /sista/. si-app is a single self-contained
       #    index.html, so we copy its files verbatim. Exclude .git and si-app's
