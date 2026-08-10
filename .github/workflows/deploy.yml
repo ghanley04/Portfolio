@@ -1,0 +1,79 @@
+name: Deploy Portfolio + SISTA to GitHub Pages
+
+on:
+  push:
+    branches: [main]          # rebuild when Portfolio changes
+  workflow_dispatch:          # manual "Run workflow" button
+  repository_dispatch:        # let si-app trigger a rebuild (optional; see notify-portfolio.yml in si-app)
+    types: [sista-updated]
+
+# Permissions the Pages deploy needs
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two deploys at once; let the latest win
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1) Portfolio source
+      - name: Checkout Portfolio
+        uses: actions/checkout@v4
+
+      # 2) si-app source (SEPARATE public repo — read-only, never pushed to)
+      - name: Checkout si-app (SISTA)
+        uses: actions/checkout@v4
+        with:
+          repository: ghanley04/si-app
+          path: si-app-src        # lands in ./si-app-src, kept out of the build
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install Portfolio deps
+        run: npm ci
+
+      - name: Build Portfolio (Create React App -> ./build)
+        run: npm run build
+
+      # 3) Drop the SISTA app under /sista/. si-app is a single self-contained
+      #    index.html, so we copy its files verbatim. Exclude .git and si-app's
+      #    OWN CNAME (a CNAME only belongs at the site root, set below).
+      - name: Stage SISTA at /sista/
+        run: |
+          mkdir -p build/sista
+          rsync -a --exclude='.git' --exclude='CNAME' si-app-src/ build/sista/
+
+      # 4) Root custom domain. CHANGE THIS if your real domain is gillian.hanley.us
+      - name: Write root CNAME
+        run: echo 'gillianhanley.us' > build/CNAME
+
+      # 5) (Optional but recommended) SPA deep-link fallback for the Portfolio
+      #    BrowserRouter. Harmless; makes /some/route reloads work.
+      - name: SPA 404 fallback
+        run: cp build/index.html build/404.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
