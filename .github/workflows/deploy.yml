@@ -58,6 +58,15 @@ jobs:
           mkdir -p build/sista
           rsync -a --exclude='.git' --exclude='CNAME' si-app-src/ build/sista/
 
+      # 3b) Sparky (electrician exam-prep rebrand of SISTA) lives at /sparky/.
+      #     It's a single self-contained file (sparky.html) in the same si-app
+      #     repo, so serve it as the index of /sparky/. Same origin as the rest
+      #     of the site, so the Cloudflare proxy's CORS allow-list already covers it.
+      - name: Stage Sparky at /sparky/
+        run: |
+          mkdir -p build/sparky
+          cp si-app-src/sparky.html build/sparky/index.html
+
       # 4) Root custom domain. CHANGE THIS if your real domain is gillian.hanley.us
       - name: Write root CNAME
         run: echo 'gillianhanley.us' > build/CNAME
