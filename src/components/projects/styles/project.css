@@ -1,21 +1,17 @@
 @import "../../../index.css";
 
+/* ---------- Card ---------- */
 .project {
-	mix-blend-mode: normal;
 	border-radius: 20px;
-	opacity: 1;
 	height: 100%;
-}
-
-.project a {
-	text-decoration: none;
+	cursor: pointer;
 }
 
 .project-image {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	min-height: 300px;
+	min-height: 200px;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -23,31 +19,51 @@
 	transition: all 0.3s ease;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 }
 
-/* Add white overlay on hover using pseudo-element */
+/* Dark scrim on hover so the text is always readable */
 .project-image::before {
-	content: '';
+	content: "";
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(255, 255, 255, 0);
-	/* Start transparent */
+	inset: 0;
+	background: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.85) 0%,
+		rgba(0, 0, 0, 0.35) 55%,
+		rgba(0, 0, 0, 0) 100%
+	);
 	border-radius: 20px;
-	transition: background 0.3s ease;
+	opacity: 0;
+	transition: opacity 0.3s ease;
 	pointer-events: none;
-	/* Allow clicks to pass through */
 	z-index: 1;
 }
 
 .project:hover .project-image::before {
-	background: var(--light-background-color);
-	opacity: 0.9;
-	/* White overlay - adjust 0.6 for more/less lightening */
+	opacity: 1;
 }
 
+.project:hover .project-image {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Status badge in the corner */
+.project-badge {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	z-index: 3;
+	font-family: var(--jetbrainsmono-font);
+	font-size: 11px;
+	font-weight: 600;
+	padding: 4px 10px;
+	border-radius: 999px;
+	color: var(--primary-color);
+	background: rgba(255, 255, 255, 0.92);
+	backdrop-filter: blur(4px);
+}
 
 .project-container {
 	position: absolute;
@@ -57,182 +73,415 @@
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
-	margin-top: auto;
 	border-radius: 20px;
-	color: var(--primary-color);
 	z-index: 2;
-	/* Above the white overlay */
 }
 
 .project-title {
-	font-family: var(--googlesansflex-font);
-	color: var(--primary-color);
+	font-family: var(--jetbrainsmono-font);
+	color: #ffffff;
 	font-size: 20px;
-	margin-bottom: 10px;
 	font-weight: 700;
 	text-align: start;
-	opacity: 1;
+	margin-bottom: 6px;
 }
 
 .project-description {
-	color: var(--secondary-color);
+	color: rgba(255, 255, 255, 0.85);
 	text-align: start;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	opacity: 1;
+	font-size: 14px;
+	line-height: 1.4;
 }
 
 .project-link {
 	display: flex;
-	align-items: start;
-	color: var(--secondary-color);
+	align-items: center;
 	font-size: 12px;
-	padding-top: 20px;
+	padding-top: 14px;
 }
 
 .project-link-text {
+	font-family: var(--jetbrainsmono-font);
 	font-weight: 700;
-	color: var(--link-color);
-	opacity: 1;
+	color: var(--border-color);
+	letter-spacing: 0.02em;
 }
 
-.project-link-icon {
-	padding-left: 5px;
-	font-size: 13px;
+.project-link-text::after {
+	content: " →";
 }
 
-/*Overlay*/
-
+/* ---------- Overlay ---------- */
 .overlay {
 	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.7);
+	inset: 0;
+	background: rgba(0, 0, 0, 0.72);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 1000;
-}
-
-.overlay a {
-	pointer-events: auto;
+	padding: 24px;
 }
 
 .overlay-content {
 	position: relative;
-	background: var(--light-background-color);
-	padding: 20px;
-	width: 90%;
-	max-width: 900px;
-	height: auto;
+	background: var(--background-color);
+	width: 100%;
+	max-width: 920px;
+	max-height: 90vh;
+	/* Stack the device screen on top and the details below so the
+	   screenshots (especially website shots) get the full width. */
 	display: flex;
-	gap: 20px;
-	border-radius: 8px;
+	flex-direction: column;
+	gap: 0;
+	border-radius: 16px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
-.overlay-container {
-	padding: 60px;
+/* ----- Gallery (top) ----- */
+.overlay-gallery {
+	flex: 0 0 auto;
+	min-width: 0;
+	background: #0e0e10;
+	display: flex;
+	flex-direction: column;
+}
+
+.overlay-gallery-stage {
+	position: relative;
 	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 360px;
+	/* Wide side gutters so the nav arrows have room to sit beside the
+	   image instead of on top of it. */
+	padding: 24px 64px;
 }
 
-.overlay-image {
-	width: 100%;
-	flex: 1;
+/* ----- Device frames ----- */
+.device-frame {
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
 }
 
-.overlay-image img {
+.device-screen {
+	position: relative;
+}
+
+/* Browser / laptop frame for website shots */
+.device-desktop {
 	width: 100%;
+	max-width: 780px;
+	border-radius: 10px;
+	overflow: hidden;
+	background: #fff;
+}
+
+.browser-bar {
+	height: 30px;
+	background: #2b2b30;
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	padding: 0 14px;
+	flex: 0 0 auto;
+}
+
+.browser-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+.dot-red {
+	background: #ff5f57;
+}
+
+.dot-yellow {
+	background: #febc2e;
+}
+
+.dot-green {
+	background: #28c840;
+}
+
+.device-desktop .device-screen img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 58vh;
 	object-fit: cover;
-	height: 100%;
-	border-radius: 8px;
+	object-position: top;
+}
 
+/* App shots already include a real iPhone frame, so we just display them
+   contained — no synthetic bezel. */
+.device-phone {
+	background: transparent;
+	box-shadow: none;
+}
+
+.device-phone .device-screen {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.device-phone .device-screen img {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	max-height: 56vh;
+	object-fit: contain;
+	filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.4));
+}
+
+.gallery-nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	border: none;
+	background: rgba(255, 255, 255, 0.9);
+	color: #111;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background 0.2s ease;
+	z-index: 2;
+}
+
+.gallery-nav:hover {
+	background: #ffffff;
+}
+
+.gallery-prev {
+	left: 14px;
+}
+
+.gallery-next {
+	right: 14px;
+}
+
+.overlay-thumbs {
+	display: flex;
+	gap: 8px;
+	padding: 12px;
+	overflow-x: auto;
+	background: #17171a;
+}
+
+.overlay-thumb {
+	flex: 0 0 auto;
+	width: 54px;
+	height: 54px;
+	border-radius: 6px;
+	border: 2px solid transparent;
+	padding: 0;
+	overflow: hidden;
+	cursor: pointer;
+	background: #000;
+	opacity: 0.6;
+	transition: all 0.2s ease;
+}
+
+.overlay-thumb img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.overlay-thumb.active,
+.overlay-thumb:hover {
+	opacity: 1;
+	border-color: var(--border-color);
+}
+
+/* ----- Details (bottom) ----- */
+.overlay-container {
+	flex: 0 0 auto;
+	padding: 32px 40px 40px;
+}
+
+/* Title row: app icon (when present) sits beside the project name. */
+.overlay-heading {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin-bottom: 12px;
+}
+
+.overlay-app-icon {
+	flex: 0 0 auto;
+	width: 52px;
+	height: 52px;
+	border-radius: 24%;
+	object-fit: cover;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 .overlay-title {
-	font-family: var(--googlesansflex-font);
+	font-family: var(--jetbrainsmono-font);
 	color: var(--primary-color);
-	font-size: 20px;
-	margin-bottom: 1em;
+	font-size: 26px;
 	font-weight: 700;
 }
 
-.overlay-description {
+.overlay-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+.overlay-status {
+	font-family: var(--jetbrainsmono-font);
+	font-size: 11px;
+	font-weight: 600;
+	padding: 4px 10px;
+	border-radius: 999px;
+	background: var(--primary-color);
+	color: var(--background-color);
+}
+
+.overlay-tag {
+	font-family: var(--jetbrainsmono-font);
+	font-size: 11px;
+	padding: 4px 10px;
+	border-radius: 999px;
+	border: 1px solid var(--border-color);
+	color: var(--primary-color);
+}
+
+.overlay-subline {
+	font-family: var(--jetbrainsmono-font);
+	font-size: 13px;
 	color: var(--secondary-color);
-	margin-bottom: 1em;
-	margin-top: 1em;
+	margin-bottom: 18px;
+}
+
+.overlay-description {
+	color: var(--link-color);
+	line-height: 1.6;
+	margin-bottom: 24px;
+}
+
+.overlay-tools {
+	margin-bottom: 24px;
+}
+
+.overlay-tools-label {
+	font-family: var(--jetbrainsmono-font);
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--tertiary-color);
+	margin-bottom: 8px;
+}
+
+.overlay-tools-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.overlay-tool {
+	font-size: 13px;
+	padding: 5px 12px;
+	border-radius: 8px;
+	background: var(--quaternary-color);
+	color: var(--primary-color);
+}
+
+.overlay-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
 .overlay-link {
 	display: flex;
 	align-items: center;
-	color: var(--secondary-color);
-	font-size: 12px;
-	padding-top: 10px;
-}
-
-.overlay-link-icon {
-	padding-left: 5px;
-	font-size: 13px;
+	gap: 8px;
+	color: var(--link-color);
+	font-size: 14px;
+	text-decoration: none;
 }
 
 .overlay-link-text {
-	padding-left: 20px;
 	font-weight: 700;
+	border-bottom: 1px solid transparent;
+	transition: border-color 0.2s ease;
+}
 
+.overlay-link:hover .overlay-link-text {
+	border-color: var(--link-color);
 }
 
 .overlay-exit {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 12px;
+	right: 12px;
 	cursor: pointer;
+	z-index: 5;
 }
 
 .overlay-exit-button {
-	font-size: 24px;
-	color: var(--secondary-color);
+	font-size: 26px;
+	color: rgba(255, 255, 255, 0.9);
+	filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
 }
 
 .overlay-exit-button:hover {
-	color: var(--link-color);
+	color: var(--border-color);
 }
 
-@media(max-width: 700px) {
+/* ---------- Responsive overlay ---------- */
+@media (max-width: 760px) {
+	.overlay {
+		padding: 0;
+	}
 
 	.overlay-content {
-		display: inline;
-		padding: 0px;
+		flex-direction: column;
+		max-height: 100vh;
+		height: 100%;
+		border-radius: 0;
 	}
 
-	.overlay-image img {
-		height: 200px;
-		border-top-left-radius: 8px;
-		border-top-right-radius: 8px;
-		object-fit: cover;
+	.overlay-gallery {
+		flex: 0 0 auto;
 	}
 
-	.overlay-image {
-		height: 50%;
+	.overlay-gallery-stage {
+		min-height: 0;
+		padding: 16px 48px;
 	}
 
-	.overlay-exit-button {
-		font-size: 24px;
-		color: var(--secondary-color);
-		background-color: white;
-		mask-image: radial-gradient(circle, white 68%, transparent 0%);
-		-webkit-mask-image: radial-gradient(circle, white 68%, transparent 0%);
-		mask-size: 100% 100%;
-
+	.device-desktop {
+		max-width: 100%;
 	}
 
-	.overlay-exit-button:hover {
-		color: var(--link-color);
+	.device-desktop .device-screen img {
+		max-height: 30vh;
+	}
+
+	.device-phone .device-screen img {
+		max-height: 46vh;
 	}
 
 	.overlay-container {
-		padding: 30px;
+		padding: 24px;
 	}
 
+	.overlay-exit-button {
+		color: #ffffff;
+	}
 }

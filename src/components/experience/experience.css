@@ -13,18 +13,30 @@
 }
 
 .item {
-    transition: transform 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 7px 14px;
+    min-width: 0;
+    border: 1px solid rgba(217, 160, 102, 0.35); /* --border-color, tinted */
+    border-radius: 999px;
+    background: var(--light-background-color);
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
 }
 
 .item:hover {
-    transform: scale(1.2);
+    transform: translateY(-2px);
+    border-color: var(--border-color);
+    box-shadow: 0 2px 8px rgba(22, 48, 133, 0.12); /* soft --primary-color */
 }
 
 .experience-icon {
-    font-size: 25px;
+    font-size: 18px;
     color: var(--secondary-color); /* Initial color */
-    padding: 8px;
     display: flex;
+    align-items: center;
     justify-content: center;
     transition: color 0.2s ease-in-out;
 }
@@ -34,7 +46,8 @@
     color: var(--secondary-color); /* Initial color */
     margin-top: 0px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
+    white-space: nowrap;
     transition: color 0.2s ease-in-out;
 }
 
@@ -55,35 +68,47 @@
     padding-top: 20px;
 }
 
+/* Grid instead of flex-wrap so rows stay tidy: 32 skills, and every
+   column count below (6 / 5 / 3 / 2) leaves a trailing row of 2 at worst —
+   never a lonely single item — at any width. */
 .icons {
-    display: flex;
-    gap: 20px;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    /* flex-wrap: wrap; */
-    justify-content: space-evenly;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+    justify-content: center;
+    align-items: stretch;
     text-align: center;
-    padding-top: 10px;
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 10px 4% 0;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1180px) {
     .icons {
-        grid-template-columns: auto auto auto auto;
-        gap: 15px;
-        /* flex-wrap: wrap; */
+        grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
 
-@media (max-width:650px) {
+@media (max-width: 900px) {
     .icons {
-        grid-template-columns: auto auto auto;
-        gap: 10px;
-        /* flex-wrap: wrap; */
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .item {
+        padding: 6px 12px;
+    }
+
+    .experience-text {
+        font-size: 12px;
     }
 }
 
-.item {
-    padding: 15px;
+@media (max-width: 520px) {
+    .icons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .header {

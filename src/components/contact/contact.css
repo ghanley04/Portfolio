@@ -21,14 +21,62 @@
 }
 
 .contact-all {
-	margin-left: 20px;
-	padding: 10px;
+	list-style: none;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 }
 
 .socials-container {
 	display: flex;
 	flex-direction: column;
 	margin-top: 30px;
+}
+
+.contact-socials {
+	display: flex;
+}
+
+/* Icon + text row: the whole thing is one clickable link */
+.contact-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+	text-decoration: none;
+	color: var(--secondary-color);
+	transition: color 0.2s ease-in-out;
+}
+
+/* Plain icon, matching the "What I've Worked With" skill icons —
+   no circular badge, no green outline. */
+.contact-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	color: var(--secondary-color);
+	font-size: 18px;
+	transition: color 0.2s ease-in-out;
+}
+
+.contact-label {
+	font-weight: 600;
+	color: var(--primary-color);
+}
+
+.contact-value {
+	word-break: break-word;
+}
+
+.contact-link:hover {
+	color: var(--link-color);
+}
+
+.contact-link:hover .contact-icon {
+	color: var(--link-color);
 }
 
 .contact-socials a:hover {

@@ -28,7 +28,7 @@
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	width: calc((100% - 1200px) / 2);
+	width: calc(var(--side-scale, 1) * (100% - 1200px) / 2);
 	background-color: var(--border-color);
 	border: 1px solid var(--border-color);
 }
@@ -70,7 +70,7 @@
 @media (max-width: 1270px) {
 	.page-content:before,
 	.page-content:after {
-		width: calc((100% - 90%) / 2);
+		width: calc(var(--side-scale, 1) * (100% - 90%) / 2);
 	}
 
 	.content-wrapper {

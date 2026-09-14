@@ -1,193 +1,111 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SiAdobephotoshop, SiJavascript, SiTailwindcss, SiFramer, SiIntellijidea, SiExpo } from "react-icons/si";
-import { FaFigma, FaAppStore, FaReact, FaCss3, FaHtml5, FaNodeJs, FaGithub, FaBootstrap, FaJava, FaAws, FaDocker, FaTerminal, FaC, FaCirclePlus, FaWordpress } from "react-icons/fa6";
+import {
+	SiAdobephotoshop,
+	SiJavascript,
+	SiTailwindcss,
+	SiFramer,
+	SiIntellijidea,
+	SiExpo,
+	SiMongodb,
+	SiJira,
+	SiNextdotjs,
+	SiTypescript,
+	SiVercel,
+	SiFirebase,
+	SiSupabase,
+	SiCplusplus,
+	SiAutodeskmaya,
+	SiUnrealengine,
+} from "react-icons/si";
+import {
+	FaFigma,
+	FaReact,
+	FaCss3,
+	FaHtml5,
+	FaNodeJs,
+	FaGithub,
+	FaBootstrap,
+	FaJava,
+	FaAws,
+	FaDocker,
+	FaTerminal,
+	FaWordpress,
+} from "react-icons/fa6";
 import { DiVisualstudio } from "react-icons/di";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { VscVscode } from "react-icons/vsc";
-
-// import INFO from "../../../data/user";
+import { TbBrandReactNative } from "react-icons/tb";
 
 import "./experience.css";
+
+// Claude's sunburst mark. react-icons has no Claude glyph yet, so we draw a
+// small radiating "spark" that inherits currentColor like the other icons.
+const ClaudeIcon = (props) => (
+	<svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" {...props}>
+		{Array.from({ length: 12 }).map((_, i) => (
+			<rect
+				key={i}
+				x="11.1"
+				y="2.2"
+				width="1.8"
+				height="8.2"
+				rx="0.9"
+				transform={`rotate(${i * 30} 12 12)`}
+			/>
+		))}
+	</svg>
+);
+
+// Skills shown in the "What I've Worked With" grid. Add a skill by dropping
+// one line here (name + its react-icons component) — no JSX to copy/paste.
+const SKILLS = [
+	{ name: "Claude Code", icon: ClaudeIcon },
+	{ name: "React", icon: FaReact },
+	{ name: "React Native", icon: TbBrandReactNative },
+	{ name: "Next.js", icon: SiNextdotjs },
+	{ name: "Node.js", icon: FaNodeJs },
+	{ name: "MongoDB", icon: SiMongodb },
+	{ name: "Firebase", icon: SiFirebase },
+	{ name: "Supabase", icon: SiSupabase },
+	{ name: "JavaScript", icon: SiJavascript },
+	{ name: "TypeScript", icon: SiTypescript },
+	{ name: "HTML5", icon: FaHtml5 },
+	{ name: "CSS", icon: FaCss3 },
+	{ name: "Tailwind", icon: SiTailwindcss },
+	{ name: "Bootstrap", icon: FaBootstrap },
+	{ name: "Java", icon: FaJava },
+	{ name: "C++", icon: SiCplusplus },
+	{ name: "C Programming", icon: FaTerminal },
+	{ name: "WordPress", icon: FaWordpress },
+	{ name: "AWS", icon: FaAws },
+	{ name: "Vercel", icon: SiVercel },
+	{ name: "Docker Desktop", icon: FaDocker },
+	{ name: "Github", icon: FaGithub },
+	{ name: "Jira", icon: SiJira },
+	{ name: "Figma", icon: FaFigma },
+	{ name: "Framer", icon: SiFramer },
+	{ name: "Photoshop", icon: SiAdobephotoshop },
+	{ name: "Maya", icon: SiAutodeskmaya },
+	{ name: "Unreal Engine", icon: SiUnrealengine },
+	{ name: "VSCode", icon: VscVscode },
+	{ name: "IntelliJ", icon: SiIntellijidea },
+	{ name: "Visual Studio", icon: DiVisualstudio },
+	{ name: "Expo Go", icon: SiExpo },
+];
 
 const Experience = () => {
 	return (
 		<>
-			<div class="h2 header">What I've Worked With</div>
+			<div className="h2 header">What I've Worked With</div>
 			<div className="icons">
-
-				<div className="item item-aws">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<FaAws />
+				{SKILLS.map(({ name, icon: Icon }) => (
+					<div className="item" key={name}>
+						<div className="experience-icon">
+							<Icon />
+						</div>
+						<div className="experience-text">{name}</div>
 					</div>
-					<div className="experience-text">AWS</div>
-					{/* </a> */}
-				</div>
-				<div className="item item-react">
-					<div className="experience-icon">
-						<FaReact />
-					</div>
-					<div className="experience-text">React</div>
-				</div>
-
-				<div className="item item-nodejs">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<FaNodeJs />
-					</div>
-					<div className="experience-text">Node.js</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-tailwind">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<SiTailwindcss />
-					</div>
-					<div className="experience-text">Tailwind</div>
-					{/* </a> */}
-				</div>
-				<div className="item item-cprogramming">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<FaTerminal />
-					</div>
-					<div className="experience-text">C Programming</div>
-					{/* </a> */}
-				</div>
-				<div className="item item-wordpress">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<FaWordpress />
-					</div>
-					<div className="experience-text">Wordpress</div>
-					{/* </a> */}
-				</div>
-				<div className="item item-docker">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<FaDocker />
-					</div>
-					<div className="experience-text">Docker Desktop</div>
-					{/* </a> */}
-				</div>
-				<div className="item item-bootstrap">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<FaBootstrap />
-					</div>
-					<div className="experience-text">Bootstrap</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-java">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<FaJava />
-					</div>
-					<div className="experience-text">Java</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-js">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<SiJavascript />
-					</div>
-					<div className="experience-text">JavaScript</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-html">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<FaHtml5 />
-					</div>
-					<div className="experience-text">HTML5</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-css">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<FaCss3 />
-					</div>
-					<div className="experience-text">CSS</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-github">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<FaGithub />
-					</div>
-					<div className="experience-text">Github</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-figma">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<FaFigma />
-					</div>
-					<div className="experience-text">Figma</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-framer">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<SiFramer />
-					</div>
-					<div className="experience-text">Framer</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-vscode">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<VscVscode />
-					</div>
-					<div className="experience-text">VSCode</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-intellij">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<SiIntellijidea />
-					</div>
-					<div className="experience-text">IntelliJ</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-photoshop">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<SiAdobephotoshop />
-					</div>
-					<div className="experience-text">Photoshop</div>
-					{/* </a> */}
-				</div>
-
-				<div className="item item-expo">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<SiExpo />
-					</div>
-					<div className="experience-text">Expo Go</div>
-					{/* </a> */}
-				</div>
-								<div className="item item-expo">
-					{/* <a href="#" target="_blank" rel="noreferrer"> */}
-					<div className="experience-icon">
-						<DiVisualstudio />
-					</div>
-					<div className="experience-text">Visual Studio</div>
-					{/* </a> */}
-				</div>
-			</div >
+				))}
+			</div>
 		</>
 	);
 };

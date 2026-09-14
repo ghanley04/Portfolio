@@ -1,6 +1,6 @@
 import React from "react";
 
-
+import { FaEnvelope, FaRegEnvelope, FaLinkedin, FaGithub, FaPhone } from "react-icons/fa6";
 
 import INFO from "../../data/user";
 
@@ -19,26 +19,74 @@ const Contact = () => {
                         comment, please feel free to contact me thorugh any of
                         these avenues:</p>
                     <ul className="contact-all">
-                        <li className="contact-socials">Work Email:
-                            &nbsp;{" "}
-                            <a className="link-color" href={`mailto:${INFO.main.personal}`}>
-                                {INFO.main.work}</a>
-                        </li>
-                        <li className="contact-socials">Personal Email:
-                            &nbsp;{" "}
-                            <a href={`mailto:${INFO.main.personal}`}>
-                                {INFO.main.personal}
+                        <li className="contact-socials">
+                            <a
+                                className="contact-link"
+                                href={`mailto:${INFO.main.work}`}
+                                aria-label="Work Email"
+                            >
+                                <span className="contact-icon">
+                                    <FaEnvelope />
+                                </span>
+                                <span className="contact-label">Work Email:</span>
+                                <span className="contact-value link-color">{INFO.main.work}</span>
                             </a>
                         </li>
-                        <li className="contact-socials" v>LinkedIn:
-                            &nbsp;{" "}
-                            <a href={INFO.main.linkedin}>
-                                {INFO.main.linkedin}
+                        <li className="contact-socials">
+                            <a
+                                className="contact-link"
+                                href={`mailto:${INFO.main.personal}`}
+                                aria-label="Personal Email"
+                            >
+                                <span className="contact-icon">
+                                    <FaRegEnvelope />
+                                </span>
+                                <span className="contact-label">Personal Email:</span>
+                                <span className="contact-value">{INFO.main.personal}</span>
                             </a>
                         </li>
-                        <li className="contact-socials">Number:
-                            &nbsp;{" "}
-                            {INFO.main.number}
+                        <li className="contact-socials">
+                            <a
+                                className="contact-link"
+                                href={INFO.main.linkedin}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="LinkedIn"
+                            >
+                                <span className="contact-icon">
+                                    <FaLinkedin />
+                                </span>
+                                <span className="contact-label">LinkedIn:</span>
+                                <span className="contact-value">{INFO.main.linkedin}</span>
+                            </a>
+                        </li>
+                        <li className="contact-socials">
+                            <a
+                                className="contact-link"
+                                href={INFO.main.github}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="GitHub"
+                            >
+                                <span className="contact-icon">
+                                    <FaGithub />
+                                </span>
+                                <span className="contact-label">GitHub:</span>
+                                <span className="contact-value">{INFO.main.github}</span>
+                            </a>
+                        </li>
+                        <li className="contact-socials">
+                            <a
+                                className="contact-link"
+                                href={`tel:${INFO.main.number.replace(/[^0-9+]/g, "")}`}
+                                aria-label="Phone Number"
+                            >
+                                <span className="contact-icon">
+                                    <FaPhone />
+                                </span>
+                                <span className="contact-label">Number:</span>
+                                <span className="contact-value">{INFO.main.number}</span>
+                            </a>
                         </li>
                     </ul>
                     <p>Thanks again for your interest, and I look forward

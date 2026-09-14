@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Project from "./project";
 
@@ -7,26 +7,44 @@ import INFO from "../../data/user";
 import "./styles/allProjects.css";
 
 const AllProjects = () => {
+	const [activeFilter, setActiveFilter] = useState("All");
+
+	const filters = ["All", ...INFO.projectFilters];
+
+	const visibleProjects =
+		activeFilter === "All"
+			? INFO.projects
+			: INFO.projects.filter((project) =>
+					(project.tags || []).includes(activeFilter)
+			  );
+
 	return (
-		<><div className='h2 header'>My Projects</div>
+		<>
+			<div className="h2 header">My Projects</div>
+
+			<div className="project-filters">
+				{filters.map((filter) => (
+					<button
+						key={filter}
+						className={`project-filter ${
+							activeFilter === filter ? "active" : ""
+						}`}
+						onClick={() => setActiveFilter(filter)}
+					>
+						{filter}
+					</button>
+				))}
+			</div>
+
 			<div className="all-projects-container">
-				{INFO.projects.map((project, index) => (
+				{visibleProjects.map((project) => (
 					<div
-						className={`all-projects-project ${project.className || ''}`}
-						key={index}>
-						<Project
-							image={project.image}
-							title={project.title}
-							description={project.description}
-							linkText={project.linkText}
-							overlayText={project.overlayText}
-							overlayTools={project.overlayTools}
-							overlayLinkText={project.overlayLinkText}
-							overlayLinkText2={project.overlayLinkText2}
-							link={project.link}
-							link2={project.link2}
-							item={project.item}
-						/>
+						className={`all-projects-project size-${
+							project.size || "wide"
+						}`}
+						key={project.item}
+					>
+						<Project project={project} />
 					</div>
 				))}
 			</div>

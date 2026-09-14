@@ -1,5 +1,187 @@
 @import "../../index.css";
 
+/* ===================== Scroll-driven intro hero ===================== */
+
+/* The hero is a sticky runway: it stays pinned for its extra height while the
+   single name element collapses from a big centred hero into its settled
+   header position. Content below scrolls up to meet it, so nothing blank is
+   ever revealed and there is only ever one name in the DOM. */
+.hero {
+	position: relative;
+	height: 138vh;
+	/* Sit above the content section, which is pulled up over the hero with a
+	   negative margin. Otherwise that section covers the resume link once it
+	   has scrolled up, swallowing clicks even though the link is still visible.
+	   Because the hero now sits on top, disable pointer events across it so
+	   clicks fall through to the content below; only .hero-subtitle re-enables
+	   them, so the resume link stays clickable without blocking anything else. */
+	z-index: 3;
+	pointer-events: none;
+}
+
+.hero-sticky {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	overflow: hidden;
+}
+
+/* Aura: an ombre of light purple bleeding into lime green. Fades out as the
+   name settles, revealing the page background beneath (no colour jump). */
+.hero-aura {
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(55% 55% at 18% 22%, rgba(175, 206, 60, 0.55) 0%, rgba(175, 206, 60, 0) 60%),
+		radial-gradient(65% 65% at 82% 26%, rgba(106, 74, 158, 0.38) 0%, rgba(106, 74, 158, 0) 62%),
+		radial-gradient(80% 80% at 60% 105%, rgba(175, 206, 60, 0.45) 0%, rgba(175, 206, 60, 0) 68%),
+		linear-gradient(
+			155deg,
+			var(--light-background-color) 0%,
+			var(--background-color) 42%,
+			var(--quaternary-color) 100%
+		);
+	will-change: opacity;
+	pointer-events: none;
+}
+
+/* Gentle drift so the aura feels alive on load. */
+.hero-aura::before {
+	content: "";
+	position: absolute;
+	inset: -20%;
+	background:
+		radial-gradient(40% 40% at 30% 40%, rgba(175, 206, 60, 0.35) 0%, rgba(175, 206, 60, 0) 70%),
+		radial-gradient(45% 45% at 70% 60%, rgba(154, 144, 168, 0.3) 0%, rgba(154, 144, 168, 0) 70%);
+	filter: blur(20px);
+	animation: hero-aura-drift 14s ease-in-out infinite alternate;
+	pointer-events: none;
+}
+
+@keyframes hero-aura-drift {
+	from {
+		transform: translate3d(-3%, -2%, 0) scale(1);
+	}
+	to {
+		transform: translate3d(3%, 2%, 0) scale(1.08);
+	}
+}
+
+/* Header column (name + subtitle) sharing the content column's left edge.
+   Anchored top-left; JS scales/centres the name for the intro, and at
+   progress 1 the transform is identity so this IS the settled header. */
+.hero-head {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: calc(3vh + 92px) 8px 0; /* clear the fixed navbar */
+	pointer-events: none;
+}
+
+.hero-name {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 0;
+	text-align: left;
+	font-family: var(--jetbrainsmono-font);
+	font-weight: 800;
+	letter-spacing: 4px;
+	line-height: 1.15; /* settled gap; JS pulls the lines together at the top */
+	color: var(--primary-color);
+	transform-origin: left top; /* scale/settle about the header's top-left */
+	will-change: transform;
+	text-shadow: 0 8px 30px rgba(61, 42, 92, 0.15);
+}
+
+.hero-name-line {
+	display: block;
+	/* Settled title size; JS scales it up for the centred hero. */
+	font-size: clamp(2.75rem, 11vw, 5rem);
+	color: var(--primary-color);
+}
+
+.hero-subtitle {
+	padding-top: 16px;
+	color: var(--secondary-color);
+	font-family: var(--jetbrainsmono-font);
+	font-size: 16px;
+	line-height: 28px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	pointer-events: auto;
+	will-change: opacity;
+}
+
+/* Track the content column at the same breakpoints as .content-wrapper. */
+@media (max-width: 1270px) {
+	.hero-head {
+		max-width: 90%;
+		padding-left: calc(10% + 8px);
+		padding-right: 10%;
+	}
+}
+
+@media (max-width: 800px) {
+	.hero-head {
+		max-width: 90%;
+		padding-left: 18px;
+		padding-right: 10px;
+	}
+}
+
+/* Pull the page content up so it sits just beneath the settled header
+   instead of a full viewport below, closing the blank band the sticky hero
+   would otherwise leave between the name and the first section. Scoped to the
+   homepage via the adjacency to .hero so other pages are untouched. */
+.hero + .content-wrapper {
+	position: relative;
+	z-index: 2;
+	margin-top: -53vh;
+}
+
+.hero-scroll-hint {
+	position: absolute;
+	bottom: 6vh;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: var(--jetbrainsmono-font);
+	font-size: 0.85rem;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: var(--primary-color);
+	opacity: 0.75;
+	animation: hero-hint-bounce 1.8s ease-in-out infinite;
+	z-index: 2;
+}
+
+@keyframes hero-hint-bounce {
+	0%,
+	100% {
+		transform: translate(-50%, 0);
+	}
+	50% {
+		transform: translate(-50%, 8px);
+	}
+}
+
+@media (max-width: 900px) {
+	.hero-name {
+		z-index: 3;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero-scroll-hint {
+		animation: none;
+	}
+}
+
 .homepage-logo-container {
 	display: flex;
 	justify-content: left;
@@ -27,12 +209,20 @@
 
 .homepage-title {
 	width: 100% !important;
-	font-family: var(--anton-font);
+	font-family: var(--jetbrainsmono-font);
 	color: var(--primary-color);
 	font-size: 80px;
-	letter-spacing: 3px;
-	font-weight: 700;
-	width: 70%;
+	letter-spacing: 4px; /* JS overrides to the scaled hero value for the swap */
+	font-weight: 800; /* match the hero name so the handoff is invisible */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	line-height: 0.82; /* stack like the hero name */
+	transform-origin: left top;
+}
+
+.homepage-title-line {
+	display: block;
 }
 
 .homepage-subtitle {
@@ -134,9 +324,10 @@
 	padding-left: 5px;
 } */
 
-/* .resume-link-text {
-	padding-left: 12px;
-} */
+.resume-link-text {
+	display: inline-flex;
+	align-items: center;
+}
 
 @media (max-width: 1024px) {
 	.homepage-first-area {

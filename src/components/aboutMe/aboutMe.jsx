@@ -18,13 +18,13 @@ const AboutMe = () => {
 					</div>
 				</div>
 				<div class="right-side">
-					<div class="details">I am a student in Web Programming and Design at Purdue University,
-						also studying Computer Science and Entrepreneurship. I am excited about both front and
-						back-end development, and I look forward to creating applications in order to solve
-						real-world problems. My favorite projects have been with startup companies, as you can 
-						find above, and expanding my knowledge in web development and computer science. I also 
-						love travelling with my family, all things arts and crafts,
-						and a good frisbee disc.</div>
+					<div class="details">I'm a senior studying Web Programming &amp; Design at Purdue
+						University, where I'm also studying Computer Science and Entrepreneurship. I work
+						across the full stack and love turning ideas into applications that solve real
+						problems — my favorite work has been with startups, a few of which you'll find above.
+						I'm currently seeking full-time opportunities. Off the screen, you'll catch me
+						travelling with my family, deep in an arts-and-crafts project, or out throwing a
+						frisbee.</div>
 				</div>
 			</div>
 		</>
