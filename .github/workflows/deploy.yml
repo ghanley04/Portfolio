@@ -50,13 +50,20 @@ jobs:
           # set CI, so warnings were harmless — this restores that behavior.
           CI: false
 
-      # 3) Drop the SISTA app under /sista/. si-app is a single self-contained
-      #    index.html, so we copy its files verbatim. Exclude .git and si-app's
-      #    OWN CNAME (a CNAME only belongs at the site root, set below).
-      - name: Stage SISTA at /sista/
+      # 3) Drop the SISTA app under /sista/. si-app is now a Vite project, so we
+      #    must BUILD it (npm run build -> dist/) and deploy the bundled output,
+      #    not the raw source. The raw index.html references /src/main.js, which
+      #    404s on a static host, and src/*.js uses bare imports only Vite's dev
+      #    server can resolve. vite.config.js sets base:'./' so dist asset URLs
+      #    are relative and resolve correctly under the /sista/ subpath.
+      - name: Build SISTA (Vite) and stage at /sista/
         run: |
+          cd si-app-src
+          npm ci
+          npm run build
+          cd ..
           mkdir -p build/sista
-          rsync -a --exclude='.git' --exclude='CNAME' si-app-src/ build/sista/
+          rsync -a si-app-src/dist/ build/sista/
 
       # 3b) Sparky (electrician exam-prep rebrand of SISTA) lives at /sparky/.
       #     It's a single self-contained file (sparky.html) in the same si-app
